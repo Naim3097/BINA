@@ -1,5 +1,5 @@
 # Source video assets (encoded versions live in assets/video/)
-Video/
+/Video/
 
 # OS
 .DS_Store
