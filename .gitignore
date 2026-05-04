@@ -1,0 +1,18 @@
+# Source video assets (encoded versions live in assets/video/)
+Video/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Node (in case of future tooling)
+node_modules/
+npm-debug.log*
+.env
+.env.local
