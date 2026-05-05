@@ -194,16 +194,25 @@
     onScrollVH();
   })();
 
-  // ---------- Horizontal scroll-scrub gallery (Katimas pattern: GSAP ScrollTrigger pin + scrub) ----------
+  // ---------- Horizontal scroll-scrub gallery (desktop only — mobile uses native swipe) ----------
+  // Use a CSS media query match so GSAP is NEVER registered, initialised, or
+  // given a chance to pin anything on mobile. A simple innerWidth check at
+  // script-execution time can still fire if layout hasn't settled yet, or if
+  // the browser reports the wrong width briefly on first paint — using
+  // matchMedia with addListener instead guarantees it is strictly desktop-only.
   (function hscrollGallery(){
     const section = document.getElementById('catalog');
     const track   = document.getElementById('hscrollTrack');
     const bar     = document.getElementById('hscrollBar');
     if (!section || !track) return;
 
-    const reduced  = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const isMobile = () => window.innerWidth <= 880;
-    if (reduced || isMobile()) return; // mobile uses native swipe
+    const reduced     = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // Strict media query — matches only when viewport is wider than 880 px.
+    // This is evaluated by the browser layout engine, not JS, so it can never
+    // fire a false positive on a narrow screen.
+    const desktopMQ   = matchMedia('(min-width: 881px)');
+
+    if (reduced || !desktopMQ.matches) return; // mobile: purely CSS snap carousel, no JS needed
 
     // Need GSAP + ScrollTrigger — they're loaded via CDN before this script
     if (!window.gsap || !window.ScrollTrigger) {
@@ -212,7 +221,23 @@
     }
     gsap.registerPlugin(ScrollTrigger);
 
-    let stInstance = null; // holds the ScrollTrigger instance for resize cleanup
+    let stInstance = null; // holds the ScrollTrigger instance for resize/MQ cleanup
+
+    // Kill GSAP pin the instant the viewport shrinks to mobile width.
+    // This handles device rotation and devtools responsive mode.
+    const onMQChange = (e) => {
+      if (!e.matches && stInstance) {
+        stInstance.kill();
+        stInstance = null;
+        gsap.set(track, { clearProps: 'transform,x' });
+      }
+    };
+    // Use addEventListener for modern browsers; fall back to deprecated addListener.
+    if (desktopMQ.addEventListener) {
+      desktopMQ.addEventListener('change', onMQChange);
+    } else {
+      desktopMQ.addListener(onMQChange); // Safari < 14 fallback
+    }
 
     const init = () => {
       // Distance the track must travel left so its right edge meets viewport's right edge
@@ -228,32 +253,18 @@
           anticipatePin: 1,
           start: 'top top',
           end: () => '+=' + Math.abs(getScrollAmount()),
-          scrub: 1,                  // ← buttery 1s lag, exactly like Katimas
+          scrub: 1,
           invalidateOnRefresh: true,
           onInit: self => { stInstance = self; },
           onUpdate: bar ? (self) => { bar.style.width = (self.progress * 100).toFixed(2) + '%'; } : undefined,
         },
       });
 
-      // Safety net: kill pin if window is resized to mobile after GSAP already initialised.
-      // Without this the pin-spacer div stays in the DOM, creating a huge phantom height
-      // that snaps/jumps when the browser eventually corrects it.
-      const onResizeCleanup = () => {
-        if (isMobile() && stInstance) {
-          stInstance.kill();
-          stInstance = null;
-          gsap.set(track, { clearProps: 'transform' });
-          window.removeEventListener('resize', onResizeCleanup);
-        }
-      };
-      window.addEventListener('resize', onResizeCleanup, { passive: true });
-
       // Re-measure once everything settles (fonts, late images, font-swap reflow)
       ScrollTrigger.refresh();
     };
 
     // Wait for ALL images in the track to decode before measuring scrollWidth.
-    // Lazy/broken images would otherwise leave scrollWidth ≈ window.innerWidth → no travel.
     const imgs = Array.from(track.querySelectorAll('img'));
     if (imgs.length === 0) {
       init();
