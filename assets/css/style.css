@@ -821,10 +821,12 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
 @media (max-width:560px){.case-grid{grid-template-columns:1fr}}
 
 /* ---------- Case studies — redesigned hero ---------- */
-.cs-hero{padding-block:24px 0;display:block}
+.cs-hero{display:block;padding:0} /* full-bleed: no container, no top padding */
 .cs-hero__media{
-  position:relative;border-radius:var(--r-lg);overflow:hidden;
-  min-height:560px;height:78vh;max-height:760px;
+  position:relative;
+  /* no border-radius — bleeds edge to edge */
+  overflow:hidden;
+  min-height:560px;height:78vh;max-height:800px;
   display:flex;align-items:flex-end;
 }
 .cs-hero__media>img{
@@ -838,9 +840,12 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
     rgba(26,14,10,.15) 70%,
     rgba(26,14,10,0) 100%);
 }
+/* content uses same gutter as .container so text aligns with the rest of the page */
 .cs-hero__content{
   position:relative;z-index:2;color:var(--on-brand,#F6EFEA);
-  padding:56px clamp(28px,5vw,72px);max-width:640px;
+  padding:56px clamp(var(--gutter),5vw,calc((100vw - var(--container)) / 2 + 48px)) clamp(48px,8vh,96px);
+  max-width:calc(var(--container) / 2 + 200px);
+  width:100%;
 }
 .cs-hero__content .crumbs{color:rgba(246,239,234,.75);margin-bottom:18px}
 .cs-hero__content .crumbs a{color:rgba(246,239,234,.85)}
@@ -859,8 +864,8 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
 .btn--ghost-light{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);background:transparent}
 .btn--ghost-light:hover{background:#fff;color:var(--ink)}
 @media (max-width:720px){
-  .cs-hero__media{min-height:520px;height:auto}
-  .cs-hero__content{padding:40px 24px}
+  .cs-hero__media{min-height:520px;height:100svh;max-height:none}
+  .cs-hero__content{padding:40px var(--gutter) 52px}
   .cs-hero__scrim{background:linear-gradient(180deg,rgba(26,14,10,.25) 0%,rgba(26,14,10,.75) 55%,rgba(26,14,10,.88) 100%)}
 }
 
