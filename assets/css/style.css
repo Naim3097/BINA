@@ -691,11 +691,11 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
 @media (max-width:520px){.footer__grid{grid-template-columns:1fr}}
 
 /* ---------- Page hero (sub-pages) ---------- */
-.page-hero{padding:48px 0 64px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end}
+.page-hero{padding-block:48px 64px;display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:end}
 .page-hero h1{margin:18px 0 18px}
 .page-hero__media{border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/3}
 .page-hero__media img{width:100%;height:100%;object-fit:cover}
-@media (max-width:880px){.page-hero{grid-template-columns:1fr;padding:32px 0 40px}}
+@media (max-width:880px){.page-hero{grid-template-columns:1fr;padding-block:32px 40px}}
 
 .crumbs{display:flex;gap:8px;font-size:.8125rem;color:var(--muted);margin-bottom:14px;letter-spacing:.01em}
 .crumbs a:hover{color:var(--brand)}
@@ -792,6 +792,132 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
 .case__price{color:var(--brand);font-weight:500;margin-top:2px;font-size:.9375rem}
 @media (max-width:980px){.case-grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:560px){.case-grid{grid-template-columns:1fr}}
+
+/* ---------- Case studies — redesigned hero ---------- */
+.cs-hero{padding-block:24px 0;display:block}
+.cs-hero__media{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;
+  min-height:560px;height:78vh;max-height:760px;
+  display:flex;align-items:flex-end;
+}
+.cs-hero__media>img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;
+}
+.cs-hero__scrim{
+  position:absolute;inset:0;z-index:1;
+  background:linear-gradient(105deg,
+    rgba(26,14,10,.78) 0%,
+    rgba(26,14,10,.55) 38%,
+    rgba(26,14,10,.15) 70%,
+    rgba(26,14,10,0) 100%);
+}
+.cs-hero__content{
+  position:relative;z-index:2;color:var(--on-brand,#F6EFEA);
+  padding:56px clamp(28px,5vw,72px);max-width:640px;
+}
+.cs-hero__content .crumbs{color:rgba(246,239,234,.75);margin-bottom:18px}
+.cs-hero__content .crumbs a{color:rgba(246,239,234,.85)}
+.cs-hero__content .crumbs a:hover{color:#fff}
+.cs-hero__content h1{
+  color:#fff;margin:14px 0 18px;
+  font-size:clamp(2.2rem,4.6vw,3.6rem);line-height:1.05;letter-spacing:-.02em;
+}
+.cs-hero__content h1 em{
+  font-style:normal;font-weight:500;color:var(--brand-soft,#EFD9D1);
+}
+.cs-hero__content .lead{color:rgba(246,239,234,.85);max-width:520px;margin-bottom:28px}
+.cs-hero__cta{display:flex;flex-wrap:wrap;gap:12px}
+.eyebrow--light{color:var(--brand-soft,#EFD9D1)}
+.eyebrow--light::before{background:var(--brand-soft,#EFD9D1)}
+.btn--ghost-light{color:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.6);background:transparent}
+.btn--ghost-light:hover{background:#fff;color:var(--ink)}
+@media (max-width:720px){
+  .cs-hero__media{min-height:520px;height:auto}
+  .cs-hero__content{padding:40px 24px}
+  .cs-hero__scrim{background:linear-gradient(180deg,rgba(26,14,10,.25) 0%,rgba(26,14,10,.75) 55%,rgba(26,14,10,.88) 100%)}
+}
+
+/* ---------- Case studies — stats section ---------- */
+.cs-stats{
+  display:grid;grid-template-columns:1.05fr 1fr;gap:28px;align-items:stretch;
+}
+.cs-stats__media{
+  position:relative;border-radius:var(--r-lg);overflow:hidden;
+  background:var(--bg-2);min-height:460px;
+}
+.cs-stats__media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cs-stats__chip{
+  position:absolute;top:20px;left:20px;z-index:1;
+  padding:10px 16px;border-radius:var(--r-pill);
+  background:rgba(255,255,255,.92);backdrop-filter:blur(6px);
+  font-size:.8125rem;font-weight:500;color:var(--ink);
+}
+.cs-stats__grid{
+  display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;
+}
+.cs-stat{
+  background:var(--surface,#F6EFEA);border-radius:var(--r-lg);
+  padding:32px;display:flex;flex-direction:column;justify-content:space-between;gap:24px;
+  min-height:220px;
+  transition:background .3s var(--tx),transform .3s var(--tx);
+}
+.cs-stat:hover{background:#fff;transform:translateY(-2px)}
+.cs-stat__num{
+  font-size:clamp(2.4rem,4vw,3.4rem);font-weight:600;letter-spacing:-.03em;
+  color:var(--brand-deep,#4A180D);line-height:1;
+}
+.cs-stat__num sup{font-size:.55em;font-weight:500;color:var(--brand);top:-.55em}
+.cs-stat__label{font-size:.9375rem;line-height:1.5;color:var(--ink-2);max-width:240px}
+@media (max-width:880px){
+  .cs-stats{grid-template-columns:1fr}
+  .cs-stats__media{min-height:320px;aspect-ratio:5/4}
+}
+@media (max-width:480px){
+  .cs-stats__grid{grid-template-columns:1fr;grid-template-rows:none}
+  .cs-stat{min-height:0;padding:24px}
+}
+
+/* ---------- Case studies — section head ---------- */
+.cs-head{
+  display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:end;
+  margin-bottom:36px;
+}
+.cs-head h2{font-size:clamp(2rem,3.6vw,2.8rem);letter-spacing:-.02em;line-height:1.05;margin-top:14px}
+.cs-head p{color:var(--ink-2);max-width:420px}
+@media (max-width:880px){.cs-head{grid-template-columns:1fr;gap:18px;margin-bottom:24px}}
+
+/* ---------- Case studies — refreshed cards (image card with inset meta) ---------- */
+.case-grid{gap:20px}
+.case{
+  background:var(--surface,#F6EFEA);border-radius:var(--r-lg);overflow:hidden;
+  padding:0;gap:0;
+  transition:transform .3s var(--tx),background .3s var(--tx);
+}
+.case:hover{transform:translateY(-4px);background:#fff}
+.case__media{
+  border-radius:0;aspect-ratio:5/4;margin:0;
+  position:relative;
+}
+.case__media .case__zoom{
+  position:absolute;right:14px;bottom:14px;z-index:1;
+  width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.95);color:var(--ink);
+  display:inline-flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(26,14,10,.18);
+  transition:background .2s var(--tx),color .2s var(--tx);
+}
+.case__media .case__zoom:hover{background:var(--brand);color:var(--on-brand)}
+.case__body{padding:20px 22px 24px;display:flex;flex-direction:column;gap:6px}
+.case__body h3{font-size:1.0625rem;font-weight:600;letter-spacing:-.005em;color:var(--ink)}
+.case__body .case__meta{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:.7rem;color:var(--muted);
+  text-transform:uppercase;letter-spacing:.14em;font-weight:500;margin-bottom:4px;
+}
+.case__body .case__price{
+  color:var(--brand-deep,#4A180D);font-weight:500;
+  font-size:.875rem;margin-top:6px;letter-spacing:.005em;
+}
 
 /* ---------- Reveal ---------- */
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s var(--tx),transform .8s var(--tx)}

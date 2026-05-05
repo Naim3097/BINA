@@ -63,20 +63,63 @@
 
 <main id="main">
 
-  <section class="container page-hero">
-    <div class="reveal">
-      <div class="crumbs"><a href="index.html">Home</a><span>/</span> Case Studies</div>
-      <span class="eyebrow">Selected work</span>
-      <h1>Real homes. <em style="color:var(--brand);font-style:normal">Real budgets.</em> Real handovers.</h1>
-      <p class="lead">Every project below was scoped, designed, built and handed over by the same BINA+ team. Hover any card to see the budget band and timeline.</p>
-    </div>
-    <div class="page-hero__media reveal" data-delay="1">
-      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=1100&q=80&auto=format&fit=crop" alt="Featured BINA+ project" loading="eager"/>
+  <!-- HERO: full-width image with overlay copy on the left -->
+  <section class="container cs-hero reveal">
+    <div class="cs-hero__media">
+      <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=2000&q=80&auto=format&fit=crop" alt="Featured BINA+ project" loading="eager"/>
+      <div class="cs-hero__scrim" aria-hidden="true"></div>
+      <div class="cs-hero__content">
+        <div class="crumbs"><a href="index.html">Home</a><span>/</span> Case Studies</div>
+        <span class="eyebrow eyebrow--light">Selected work</span>
+        <h1>Real homes.<br/><em>Real budgets.</em><br/>Real handovers.</h1>
+        <p class="lead">Every project below was scoped, designed, built and handed over by the same BINA+ team — across Selangor and the Klang Valley.</p>
+        <div class="cs-hero__cta">
+          <a href="#projects" class="btn btn--primary">Browse projects</a>
+          <a href="https://wa.me/60193428981" class="btn btn--ghost btn--ghost-light">Start a project</a>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- STATS: image left, data boxes right -->
   <section class="section">
+    <div class="container cs-stats">
+      <div class="cs-stats__media reveal">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop" alt="BINA+ delivered home"/>
+        <span class="cs-stats__chip">Why clients pick us</span>
+      </div>
+      <div class="cs-stats__grid">
+        <div class="cs-stat reveal">
+          <span class="cs-stat__num">500<sup>+</sup></span>
+          <span class="cs-stat__label">Projects scoped &amp; delivered across Selangor.</span>
+        </div>
+        <div class="cs-stat reveal" data-delay="1">
+          <span class="cs-stat__num">15</span>
+          <span class="cs-stat__label">Years of combined design &amp; build experience.</span>
+        </div>
+        <div class="cs-stat reveal" data-delay="1">
+          <span class="cs-stat__num">98<sup>%</sup></span>
+          <span class="cs-stat__label">Clients who refer BINA+ to family or friends.</span>
+        </div>
+        <div class="cs-stat reveal" data-delay="2">
+          <span class="cs-stat__num">100<sup>+</sup></span>
+          <span class="cs-stat__label">Tradespeople, consultants &amp; partners on call.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS GRID -->
+  <section class="section" id="projects">
     <div class="container">
+      <div class="cs-head reveal">
+        <div>
+          <span class="eyebrow">Our projects</span>
+          <h2>From land sourcing<br/>to handover &mdash; covered.</h2>
+        </div>
+        <p>Filter by scope to see what fits your brief. Every project is delivered with a fixed contract and a single point of accountability.</p>
+      </div>
+
       <div class="filter reveal" role="tablist" aria-label="Filter projects">
         <button class="is-active" data-filter="all">All projects</button>
         <button data-filter="design-build">Design & Build</button>
@@ -86,66 +129,87 @@
 
       <div class="case-grid">
         <article class="case reveal" data-category="design-build">
-          <div class="case__media"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80&auto=format&fit=crop" alt="Bandar Saujana single-storey home" loading="lazy"/></div>
-          <div class="case__meta"><span>Bandar Saujana, Selangor</span><span>2024</span></div>
-          <h3>The Saujana Single-Storey</h3>
-          <span class="case__price">BINA START · 1,200 sqft · from RM200,000</span>
+          <div class="case__media">
+            <img src="assets/assets/house 1.jpg" alt="Bandar Saujana single-storey home" loading="lazy"/>
+            <a href="#" class="case__zoom" aria-label="View project"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg></a>
+          </div>
+          <div class="case__body">
+            <div class="case__meta"><span>Bandar Saujana, Selangor</span><span>2024</span></div>
+            <h3>The Saujana Single-Storey</h3>
+            <span class="case__price">BINA START · 1,200 sqft · from RM200,000</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="design-build" data-delay="1">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80&auto=format&fit=crop" alt="Subang Jaya semi-double home" loading="lazy"/></div>
-          <div class="case__meta"><span>Subang Jaya, Selangor</span><span>2024</span></div>
-          <h3>The Subang Pavilion</h3>
-          <span class="case__price">BINA PLUS · 1,500 sqft · from RM350,000</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Subang Jaya, Selangor</span><span>2024</span></div>
+            <h3>The Subang Pavilion</h3>
+            <span class="case__price">BINA PLUS · 1,500 sqft · from RM350,000</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="design-build" data-delay="2">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=800&q=80&auto=format&fit=crop" alt="Shah Alam double-storey home" loading="lazy"/></div>
-          <div class="case__meta"><span>Shah Alam, Selangor</span><span>2025</span></div>
-          <h3>The U5 Custom Build</h3>
-          <span class="case__price">BINA MAX · 2,000 sqft · from RM460,000</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Shah Alam, Selangor</span><span>2025</span></div>
+            <h3>The U5 Custom Build</h3>
+            <span class="case__price">BINA MAX · 2,000 sqft · from RM460,000</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="renovation">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&auto=format&fit=crop" alt="Klang terrace renovation" loading="lazy"/></div>
-          <div class="case__meta"><span>Klang, Selangor</span><span>2024</span></div>
-          <h3>Bukit Tinggi Full Reno</h3>
-          <span class="case__price">Renovation · 1,800 sqft · RM300,000</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Klang, Selangor</span><span>2024</span></div>
+            <h3>Bukit Tinggi Full Reno</h3>
+            <span class="case__price">Renovation · 1,800 sqft · RM300,000</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="renovation" data-delay="1">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1556909114-44e3e9399a2f?w=800&q=80&auto=format&fit=crop" alt="Petaling Jaya kitchen renovation" loading="lazy"/></div>
-          <div class="case__meta"><span>Petaling Jaya, Selangor</span><span>2025</span></div>
-          <h3>The PJ Kitchen Refresh</h3>
-          <span class="case__price">Renovation · kitchen + living · RM200,000</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Petaling Jaya, Selangor</span><span>2025</span></div>
+            <h3>The PJ Kitchen Refresh</h3>
+            <span class="case__price">Renovation · kitchen + living · RM200,000</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="interior" data-delay="2">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=800&q=80&auto=format&fit=crop" alt="USJ interior design" loading="lazy"/></div>
-          <div class="case__meta"><span>USJ, Selangor</span><span>2025</span></div>
-          <h3>The USJ Interior Reset</h3>
-          <span class="case__price">Interior 9-in-1 · full home · RM59,999</span>
+          <div class="case__body">
+            <div class="case__meta"><span>USJ, Selangor</span><span>2025</span></div>
+            <h3>The USJ Interior Reset</h3>
+            <span class="case__price">Interior 9-in-1 · full home · RM59,999</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="design-build">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80&auto=format&fit=crop" alt="Kajang custom home" loading="lazy"/></div>
-          <div class="case__meta"><span>Kajang, Selangor</span><span>2025</span></div>
-          <h3>The Kajang Courtyard House</h3>
-          <span class="case__price">BINA MAX · 2,200 sqft · from RM520,000</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Kajang, Selangor</span><span>2025</span></div>
+            <h3>The Kajang Courtyard House</h3>
+            <span class="case__price">BINA MAX · 2,200 sqft · from RM520,000</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="interior" data-delay="1">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=800&q=80&auto=format&fit=crop" alt="Cyberjaya apartment" loading="lazy"/></div>
-          <div class="case__meta"><span>Cyberjaya, Selangor</span><span>2024</span></div>
-          <h3>The Cyber Loft</h3>
-          <span class="case__price">Interior 7-in-1 · 1,100 sqft · RM49,999</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Cyberjaya, Selangor</span><span>2024</span></div>
+            <h3>The Cyber Loft</h3>
+            <span class="case__price">Interior 7-in-1 · 1,100 sqft · RM49,999</span>
+          </div>
         </article>
 
         <article class="case reveal" data-category="renovation" data-delay="2">
           <div class="case__media"><img src="https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?w=800&q=80&auto=format&fit=crop" alt="Ampang renovation" loading="lazy"/></div>
-          <div class="case__meta"><span>Ampang, Selangor</span><span>2024</span></div>
-          <h3>The Ampang Refit</h3>
-          <span class="case__price">Renovation · 2 areas · RM100,000</span>
+          <div class="case__body">
+            <div class="case__meta"><span>Ampang, Selangor</span><span>2024</span></div>
+            <h3>The Ampang Refit</h3>
+            <span class="case__price">Renovation · 2 areas · RM100,000</span>
+          </div>
         </article>
       </div>
     </div>
