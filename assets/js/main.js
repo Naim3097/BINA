@@ -212,6 +212,8 @@
     }
     gsap.registerPlugin(ScrollTrigger);
 
+    let stInstance = null; // holds the ScrollTrigger instance for resize cleanup
+
     const init = () => {
       // Distance the track must travel left so its right edge meets viewport's right edge
       const getScrollAmount = () => -(track.scrollWidth - window.innerWidth);
@@ -228,9 +230,23 @@
           end: () => '+=' + Math.abs(getScrollAmount()),
           scrub: 1,                  // ← buttery 1s lag, exactly like Katimas
           invalidateOnRefresh: true,
+          onInit: self => { stInstance = self; },
           onUpdate: bar ? (self) => { bar.style.width = (self.progress * 100).toFixed(2) + '%'; } : undefined,
         },
       });
+
+      // Safety net: kill pin if window is resized to mobile after GSAP already initialised.
+      // Without this the pin-spacer div stays in the DOM, creating a huge phantom height
+      // that snaps/jumps when the browser eventually corrects it.
+      const onResizeCleanup = () => {
+        if (isMobile() && stInstance) {
+          stInstance.kill();
+          stInstance = null;
+          gsap.set(track, { clearProps: 'transform' });
+          window.removeEventListener('resize', onResizeCleanup);
+        }
+      };
+      window.addEventListener('resize', onResizeCleanup, { passive: true });
 
       // Re-measure once everything settles (fonts, late images, font-swap reflow)
       ScrollTrigger.refresh();

@@ -516,20 +516,25 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
   }
 
   /* Carousel frame */
-  .hscroll__sticky{position:relative;height:auto;padding-bottom:24px}
+  /* Fix: remove overflow:hidden (creates a scroll container that captures touch events) */
+  .hscroll__sticky{position:relative;height:auto;padding-bottom:24px;overflow:visible}
   .hscroll__viewport{
-    overflow-x:auto;overflow-y:hidden;
+    overflow-x:auto;
+    /* clip (not hidden) — does NOT create a scroll container, prevents touch-event capture */
+    overflow-y:clip;
     scroll-snap-type:x mandatory;
-    -webkit-overflow-scrolling:touch;
-    overscroll-behavior-x:contain;
+    /* removed: -webkit-overflow-scrolling:touch (deprecated, causes iOS momentum conflicts) */
+    /* contain both axes — prevents pull-to-refresh stutter on Android */
+    overscroll-behavior:contain;
     scroll-padding-left:var(--gutter);
     height:auto;
-    /* hide scrollbar */
     scrollbar-width:none;
   }
   .hscroll__viewport::-webkit-scrollbar{display:none}
   .hscroll__track{
     transform:none !important;
+    /* auto — removes GPU compositing layer that causes repaint "pop" on scroll */
+    will-change:auto;
     width:max-content;
     height:auto;
     gap:14px;
