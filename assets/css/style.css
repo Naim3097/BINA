@@ -843,7 +843,8 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
 /* content uses same gutter as .container so text aligns with the rest of the page */
 .cs-hero__content{
   position:relative;z-index:2;color:var(--on-brand,#F6EFEA);
-  padding:56px clamp(var(--gutter),5vw,calc((100vw - var(--container)) / 2 + 48px)) clamp(48px,8vh,96px);
+  /* padding-inline mirrors .container: (viewport - max-width) / 2 + gutter */
+  padding:56px max(var(--gutter), calc((100vw - var(--container)) / 2 + var(--gutter))) clamp(48px,8vh,96px);
   max-width:calc(var(--container) / 2 + 200px);
   width:100%;
 }
