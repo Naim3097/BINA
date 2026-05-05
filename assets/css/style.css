@@ -247,6 +247,7 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
 .vhero__progress{
   position:absolute;left:0;right:0;bottom:0;z-index:3;
   height:2px;background:rgba(246,239,234,.15);
+  display:none; /* hidden — seamless join with hero section below */
 }
 .vhero__progress-bar{
   display:block;height:100%;width:0%;
@@ -275,15 +276,7 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
   position:relative;
   color:var(--on-brand);
 }
-/* Smooth gradient bleed from dark hero into the light features section below */
-.hero::after{
-  content:"";
-  position:absolute;left:0;right:0;bottom:0;
-  height:140px;
-  background:linear-gradient(180deg, rgba(10,6,4,0) 0%, var(--bg) 100%);
-  pointer-events:none;
-  z-index:0;
-}
+/* No bottom gradient — hard edge into the features section */
 .hero__grid{
   display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:stretch;
   position:relative;z-index:1;
@@ -337,7 +330,7 @@ em.accent,h1 em,h2 em{font-style:italic;font-weight:500;color:var(--brand)}
   .hero__media{min-height:380px;order:-1}
   .hero__cta{margin-bottom:36px}
   .hero__stats{grid-template-columns:repeat(3,1fr);gap:18px}
-  .hero::after{height:100px}
+  /* no hero::after on mobile either */
 }
 
 /* ---------- Feature trio (dark cards) ---------- */
