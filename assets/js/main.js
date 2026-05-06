@@ -103,12 +103,22 @@
 
     const reveals = section.querySelectorAll('.vhero__reveal');
     const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouch = matchMedia('(pointer: coarse)').matches;
 
-    if (reduced) {
+    // Mobile / touch / reduced-motion: skip scroll-scrub entirely (huge jank source
+    // on phones — setting video.currentTime per scroll event blocks the main thread
+    // while the decoder seeks). Just autoplay+loop and reveal the headline once.
+    if (reduced || isTouch) {
       reveals.forEach(el => el.classList.add('is-in'));
       video.setAttribute('autoplay','');
       video.setAttribute('loop','');
-      video.play?.().catch(()=>{});
+      video.muted = true;
+      video.playsInline = true;
+      const tryPlay = () => video.play?.().catch(()=>{});
+      tryPlay();
+      // iOS sometimes needs a user gesture to start playback
+      document.addEventListener('touchstart', tryPlay, { once:true, passive:true });
+      document.addEventListener('click', tryPlay, { once:true });
       return;
     }
 
