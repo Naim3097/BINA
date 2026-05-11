@@ -16,3 +16,9 @@ node_modules/
 npm-debug.log*
 .env
 .env.local
+
+# SEO satellite hubs (separate repos)
+/seo-hub-local-klang-valley/
+/seo-hub-newhome-malaysia/
+/seo-hub-renovation-cost/
+/seo-hub-rumah-idaman/
