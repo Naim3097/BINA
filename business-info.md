@@ -13,7 +13,7 @@
 
 ## Contact
 
-- **Najiha:** +60 19-342 8981
+- **Syafiq:** +60 19-342 8981
 - **Syafiq:** +60 13-431 5051
 - **Email:** bina.designbuild@gmail.com
 
