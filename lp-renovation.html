@@ -111,15 +111,44 @@
   .lp-aud-card__scope strong{color:var(--ink);font-weight:600}
   .lp-aud-card .btn{align-self:flex-start;margin-top:6px;padding:11px 18px;font-size:0.875rem}
 
-  /* Promises */
-  .lp-promises{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  /* Promises — redesigned dark-card layout */
+  .lp-promises-wrap{position:relative;overflow:hidden;background:var(--bg) url('assets/assets/background image lp.png') center/cover no-repeat}
+  .lp-promises-wrap::before{content:"";position:absolute;left:-50px;top:50%}
+  .lp-promises-wrap::after{content:"";position:absolute;inset:0;background-image:radial-gradient(circle,rgba(0,0,0,.09) 1px,transparent 1px);background-size:22px 22px;pointer-events:none;z-index:0;opacity:.5}
+  .lp-promises-wrap>.container{position:relative;z-index:1}
+  .lp-promises{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
   @media(max-width:960px){.lp-promises{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:560px){.lp-promises{grid-template-columns:1fr}}
-  .lp-promise{background:var(--lp-dark-2);color:#fff;border-radius:var(--r-md);padding:26px 22px;display:flex;flex-direction:column;gap:14px;min-height:200px}
-  .lp-promise__icon{width:40px;height:40px;border-radius:10px;background:rgba(255,255,255,.07);display:grid;place-items:center;color:#fff}
-  .lp-promise__icon svg{width:20px;height:20px}
-  .lp-promise h3{color:#fff;font-size:1rem;line-height:1.3}
-  .lp-promise p{color:rgba(255,255,255,.68);font-size:0.875rem;line-height:1.55}
+  .lp-promise{background:#0f0f0f;color:#fff;border-radius:16px;padding:20px 20px 20px;display:flex;flex-direction:column;gap:0;min-height:310px;position:relative;overflow:hidden;transition:transform .25s ease,box-shadow .25s ease}
+  .lp-promise:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,.35)}
+  .lp-promise__num{position:absolute;top:18px;left:18px;width:30px;height:30px;border-radius:50%;background:var(--brand);color:#fff;font-size:.6875rem;font-weight:700;display:grid;place-items:center;z-index:3;letter-spacing:.04em;flex:none}
+  /* Card image — top-right quadrant */
+  .lp-promise__img{position:absolute;top:0;right:0;width:58%;height:60%;z-index:1;overflow:hidden;border-radius:0 16px 0 0}
+  .lp-promise__img img{width:100%;height:100%;object-fit:cover;display:block;opacity:.85;mix-blend-mode:luminosity}
+  .lp-promise__img::after{content:"";position:absolute;inset:0;background:linear-gradient(125deg,#0f0f0f 5%,#0f0f0f 22%,rgba(15,15,15,.55) 55%,transparent 80%)}
+  /* Placeholder glows while no image is set */
+  .lp-promise:nth-child(1) .lp-promise__img{background:radial-gradient(circle at 65% 40%,rgba(255,190,80,.28) 0%,transparent 65%)}
+  .lp-promise:nth-child(2) .lp-promise__img{background:radial-gradient(circle at 65% 40%,rgba(80,160,255,.28) 0%,transparent 65%)}
+  .lp-promise:nth-child(3) .lp-promise__img{background:radial-gradient(circle at 65% 40%,rgba(255,130,60,.28) 0%,transparent 65%)}
+  .lp-promise:nth-child(4) .lp-promise__img{background:radial-gradient(circle at 65% 40%,rgba(220,175,60,.28) 0%,transparent 65%)}
+  /* Icon */
+  .lp-promise__icon{width:38px;height:38px;border-radius:9px;background:rgba(255,255,255,.09);display:grid;place-items:center;color:#fff;position:relative;z-index:2;margin-top:40px;flex:none}
+  .lp-promise__icon svg{width:19px;height:19px}
+  /* Body */
+  .lp-promise__body{flex:1;display:flex;flex-direction:column;gap:8px;position:relative;z-index:2;margin-top:14px}
+  .lp-promise h3{color:#fff;font-size:1.0625rem;line-height:1.25;font-weight:700}
+  .lp-promise__divider{width:28px;height:2px;background:var(--brand);border:none;border-radius:2px;margin:2px 0;flex:none}
+  .lp-promise p{color:rgba(255,255,255,.60);font-size:.8125rem;line-height:1.58;flex:1}
+  /* Arrow */
+  .lp-promise__arrow{margin-top:14px;width:32px;height:32px;border-radius:50%;background:var(--brand);color:#fff;display:grid;place-items:center;align-self:flex-start;position:relative;z-index:2;flex:none;transition:background .2s ease}
+  .lp-promise:hover .lp-promise__arrow{background:var(--brand-2)}
+  .lp-promise__arrow svg{width:14px;height:14px}
+  /* Footer pill */
+  .lp-promise-footer{display:flex;justify-content:center;margin-top:36px;position:relative;z-index:1}
+  .lp-promise-footer__pill{display:inline-flex;align-items:center;gap:14px;background:#fff;border-radius:var(--r-pill);padding:13px 28px;font-size:.875rem;font-weight:500;color:var(--ink);box-shadow:0 2px 16px rgba(0,0,0,.09)}
+  .pf-shield{width:30px;height:30px;border-radius:50%;background:var(--brand);display:grid;place-items:center;color:#fff;flex:none}
+  .pf-shield svg{width:14px;height:14px}
+  .lp-promise-footer__pill em{color:var(--brand);font-style:normal;font-weight:600}
 
   /* Packages */
   .lp-packages{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:stretch}
@@ -335,35 +364,88 @@
 </section>
 
 <!-- ============== PROMISES ============== -->
-<section class="section">
+<section class="section lp-promises-wrap">
   <div class="container">
     <div class="lp-section-head lp-section-head--center">
       <span class="eyebrow">What you get</span>
-      <h2>Four things we put in writing</h2>
+      <h2>Four things we put in writing.</h2>
       <p>Not verbal commitments. Documented. Signed. Photographed.</p>
     </div>
 
     <div class="lp-promises">
+
+      <!-- 01 — Line item quote -->
       <article class="lp-promise">
+        <span class="lp-promise__num">01</span>
+        <div class="lp-promise__img" aria-hidden="true">
+          <!-- DROP IMAGE HERE: promise-quote.jpg (clipboard / contract document) -->
+          <img src="" alt="" loading="lazy"/>
+        </div>
         <div class="lp-promise__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg></div>
-        <h3>Line item quote</h3>
-        <p>Every quote lists every item, quantity and unit price. If you cannot audit it, we will not send it.</p>
+        <div class="lp-promise__body">
+          <h3>Line item quote</h3>
+          <hr class="lp-promise__divider"/>
+          <p>Every quote lists every item, quantity and unit price. If you cannot audit it, we will not send it.</p>
+        </div>
+        <div class="lp-promise__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </article>
+
+      <!-- 02 — Daily site photos -->
       <article class="lp-promise">
+        <span class="lp-promise__num">02</span>
+        <div class="lp-promise__img" aria-hidden="true">
+          <!-- DROP IMAGE HERE: promise-photos.jpg (camera / DSLR) -->
+          <img src="" alt="" loading="lazy"/>
+        </div>
         <div class="lp-promise__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg></div>
-        <h3>Daily site photos</h3>
-        <p>Your supervisor uploads dated photos every workday. You can check progress from your phone, even at the office.</p>
+        <div class="lp-promise__body">
+          <h3>Daily site photos</h3>
+          <hr class="lp-promise__divider"/>
+          <p>Your supervisor uploads dated photos every workday. You can check progress from your phone, even at the office.</p>
+        </div>
+        <div class="lp-promise__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </article>
+
+      <!-- 03 — Fixed handover date -->
       <article class="lp-promise">
+        <span class="lp-promise__num">03</span>
+        <div class="lp-promise__img" aria-hidden="true">
+          <!-- DROP IMAGE HERE: promise-date.jpg (desk calendar) -->
+          <img src="" alt="" loading="lazy"/>
+        </div>
         <div class="lp-promise__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><polyline points="9 16 11 18 15 14"/></svg></div>
-        <h3>Fixed handover date</h3>
-        <p>The handover date is a contract clause. Liquidated damages apply if we miss it without an approved variation order.</p>
+        <div class="lp-promise__body">
+          <h3>Fixed handover date</h3>
+          <hr class="lp-promise__divider"/>
+          <p>The handover date is a contract clause. Liquidated damages apply if we miss it without an approved variation order.</p>
+        </div>
+        <div class="lp-promise__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </article>
+
+      <!-- 04 — Free items -->
       <article class="lp-promise">
+        <span class="lp-promise__num">04</span>
+        <div class="lp-promise__img" aria-hidden="true">
+          <!-- DROP IMAGE HERE: promise-free.jpg (gift box with bow) -->
+          <img src="" alt="" loading="lazy"/>
+        </div>
         <div class="lp-promise__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-        <h3>Free items on every D&amp;B package</h3>
-        <p>3D design, electrical wiring install, 8ft table top, downlights, sink, smart lock, fan fittings, safety door and a site visit.</p>
+        <div class="lp-promise__body">
+          <h3>Free items on every D&amp;B package</h3>
+          <hr class="lp-promise__divider"/>
+          <p>3D design, electrical wiring install, 8ft table top, downlights, sink, smart lock, fan fittings, safety door and a site visit.</p>
+        </div>
+        <div class="lp-promise__arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
       </article>
+
+    </div>
+
+    <!-- Trust footer strip -->
+    <div class="lp-promise-footer">
+      <div class="lp-promise-footer__pill">
+        <div class="pf-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        We document it. You get proof. <em>No surprises.</em>
+      </div>
     </div>
   </div>
 </section>

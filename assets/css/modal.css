@@ -208,22 +208,22 @@
   align-items:center;
   padding:48px clamp(28px,4vw,56px);
   border-radius:var(--r-lg, 18px);
-  background:var(--ink);color:#fff;
+  background:var(--ink);color:var(--on-brand);
 }
-.pmodal .pm-cta .eyebrow{color:rgba(255,255,255,.6)}
-.pmodal .pm-cta h3{
+.pm-cta .eyebrow{color:var(--brand-soft, #EFD9D1)}
+.pm-cta h3{
   font-size:clamp(1.5rem,2.6vw,1.875rem);
-  color:#fff;margin:10px 0 8px;
+  color:var(--on-brand);margin:10px 0 8px;
   letter-spacing:-.015em;font-weight:600;
 }
-.pmodal .pm-cta p{color:rgba(255,255,255,.78);margin:0;line-height:1.55;max-width:480px}
+.pm-cta p{color:rgba(246,239,234,.78);margin:0;line-height:1.55;max-width:480px}
 .pm-cta__actions{display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end}
-.pmodal .pm-cta .btn--ghost{
-  color:#fff;
-  border-color:rgba(255,255,255,.45);
+.pm-cta .btn--ghost{
+  color:var(--on-brand);
+  border-color:rgba(246,239,234,.45);
   background:transparent;
 }
-.pmodal .pm-cta .btn--ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.7)}
+.pm-cta .btn--ghost:hover{background:rgba(246,239,234,.08);border-color:rgba(246,239,234,.7)}
 
 /* =========================================================
    Tablet
