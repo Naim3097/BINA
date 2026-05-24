@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://bina.designbuild/</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/about.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/about.html"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/services.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/services.html"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/case-studies.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/case-studies.html"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/ms/index.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/index.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/ms/about.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/about.html"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/about.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/about.html"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/ms/services.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/services.html"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/services.html"/>
+  </url>
+  <url>
+    <loc>https://bina.designbuild/ms/case-studies.html</loc>
+    <lastmod>2026-05-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en-MY" href="https://bina.designbuild/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="ms-MY" href="https://bina.designbuild/ms/case-studies.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bina.designbuild/case-studies.html"/>
+  </url>
+</urlset>

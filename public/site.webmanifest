@@ -1,0 +1,14 @@
+{
+  "name": "BINA+ Design & Build",
+  "short_name": "BINA+",
+  "description": "Malaysian design-and-build studio crafting modern homes from RM200k.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#EAEAEA",
+  "theme_color": "#A33D26",
+  "icons": [
+    { "src": "BINA LOGO 1.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "BINA LOGO 1.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

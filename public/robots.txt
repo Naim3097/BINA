@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /assets/
+Disallow: /lp-renovation.html
+Disallow: /lp-*
+Disallow: /privacy.html
+
+Sitemap: https://bina.designbuild/sitemap.xml
