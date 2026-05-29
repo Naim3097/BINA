@@ -393,9 +393,12 @@ em.accent, h1 em, h2 em {
     position: relative;
     height: 100svh;
     height: 100dvh;
-    align-items: flex-end;
-    padding-bottom: 80px;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
   }
+  /* Shift the copy block slightly above true centre */
+  .vhero__inner { margin-top: -10vh; }
   .vhero__copy {
     max-width: 100%;
     text-align: center;
@@ -410,9 +413,9 @@ em.accent, h1 em, h2 em {
   }
   .vhero__cta {
     justify-content: center;
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
   }
   .vhero__scrim {
     background: linear-gradient(180deg, rgba(10, 6, 4, .55) 0%, rgba(10, 6, 4, .4) 35%, rgba(10, 6, 4, .8) 100%);
