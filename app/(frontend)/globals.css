@@ -1020,7 +1020,7 @@ em.accent, h1 em, h2 em {
 @media (max-width:880px){
   .team-principal{grid-template-columns:1fr;gap:32px;padding:32px}
   .team-principal__media{order:-1}
-  .team-principal__media img{aspect-ratio:4/3}
+  .team-principal__media img{aspect-ratio:3/4;object-position:top center}
   .team-row{grid-template-columns:repeat(3,1fr)}
 }
 @media (max-width:560px){.team-row{grid-template-columns:1fr}}
