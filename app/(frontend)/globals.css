@@ -389,9 +389,31 @@ em.accent, h1 em, h2 em {
 
 @media (max-width: 820px) {
   .vhero { height: auto; }
-  .vhero__sticky { position: relative; height: 100svh; height: 100vh; }
-  .vhero__title { font-size: clamp(2.25rem, 9vw, 3.25rem); }
-  .vhero__lead { font-size: 1rem; }
+  .vhero__sticky {
+    position: relative;
+    height: 100svh;
+    height: 100dvh;
+    align-items: flex-end;
+    padding-bottom: 80px;
+  }
+  .vhero__copy {
+    max-width: 100%;
+    text-align: center;
+  }
+  .vhero__title {
+    font-size: clamp(2.25rem, 9vw, 3.25rem);
+    margin-top: 10px;
+  }
+  .vhero__lead {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  .vhero__cta {
+    justify-content: center;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
   .vhero__scrim {
     background: linear-gradient(180deg, rgba(10, 6, 4, .55) 0%, rgba(10, 6, 4, .4) 35%, rgba(10, 6, 4, .8) 100%);
   }
