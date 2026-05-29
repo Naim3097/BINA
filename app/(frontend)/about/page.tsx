@@ -71,7 +71,7 @@ export default function AboutEn() {
           <Reveal delay={1} className="page-hero__media">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=1100&q=80&auto=format&fit=crop"
+              src="/assets/assets/team%20photo.png"
               alt="BINA+ studio space"
               loading="eager"
             />
@@ -153,12 +153,12 @@ export default function AboutEn() {
             <Reveal className="team-principal">
               <div className="team-principal__body">
                 <span className="eyebrow">Principal</span>
-                <h2 className="team-principal__name">Najiha</h2>
-                <p className="team-principal__role">Co-founder &amp; Design Lead</p>
+                <h2 className="team-principal__name">Syafiq</h2>
+                <p className="team-principal__role">Director (Marketing &amp; Strategy)</p>
                 <p className="team-principal__bio">
-                  Najiha leads every project from concept to handover. With a background in
-                  architecture, she&apos;s the one who ensures what gets built actually matches what
-                  was promised — sitting in on every briefing and visiting sites mid-pour. Her
+                  Syafiq leads every project from concept to handover. With a background in
+                  architecture, he&apos;s the one who ensures what gets built actually matches what
+                  was promised — sitting in on every briefing and visiting sites mid-pour. His
                   approach: one studio, one manager, no surprises.
                 </p>
                 <a href="https://wa.me/60193428981" className="team-principal__cta">
@@ -168,8 +168,8 @@ export default function AboutEn() {
               <div className="team-principal__media">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=700&q=80&auto=format&fit=crop"
-                  alt="Najiha — Co-founder & Design Lead"
+                  src="/assets/assets/syafiq%20bina.jpeg"
+                  alt="Syafiq — Director (Marketing & Strategy)"
                   loading="lazy"
                 />
               </div>
@@ -183,37 +183,37 @@ export default function AboutEn() {
               <Reveal as="article" className="team__card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&q=80&auto=format&fit=crop"
-                  alt="Syafiq — Co-founder & Build Lead"
+                  src="/assets/assets/zulma%27arif%20bina.jpeg"
+                  alt="Zulma'Arif — Director (Project and Operations)"
                   loading="lazy"
                 />
                 <div>
-                  <h3>Syafiq</h3>
-                  <span>Co-founder · Build Lead</span>
+                  <h3>Zulma&apos;Arif</h3>
+                  <span>Director (Project and Operations)</span>
                 </div>
               </Reveal>
               <Reveal as="article" delay={1} className="team__card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=80&auto=format&fit=crop"
-                  alt="Aisyah — Project Manager"
+                  src="/assets/assets/muhaimin%20bina.jpeg"
+                  alt="Muhaimin — Director (Coordination & Support)"
                   loading="lazy"
                 />
                 <div>
-                  <h3>Aisyah</h3>
-                  <span>Project Manager</span>
+                  <h3>Muhaimin</h3>
+                  <span>Director (Coordination &amp; Support)</span>
                 </div>
               </Reveal>
               <Reveal as="article" delay={2} className="team__card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80&auto=format&fit=crop"
-                  alt="Hakim — Site Supervisor"
+                  src="/assets/assets/syahmi%20bina.jpeg"
+                  alt="Syahmi — Director (Design & Creative)"
                   loading="lazy"
                 />
                 <div>
-                  <h3>Hakim</h3>
-                  <span>Site Supervisor</span>
+                  <h3>Syahmi</h3>
+                  <span>Director (Design &amp; Creative)</span>
                 </div>
               </Reveal>
             </div>

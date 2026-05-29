@@ -7,8 +7,8 @@ export default function Hero() {
         <Reveal className="hero__copy">
           <span className="eyebrow">Design · Build · Live</span>
           <h1>
-            Turnkey homes from <em>RM200k</em>, designed and built in{" "}
-            <em>under 6 months</em>.
+            Turnkey homes from <em style={{ color: "var(--brand)", fontStyle: "normal" }}>RM200k</em>, designed and built in{" "}
+            <em style={{ color: "var(--brand)", fontStyle: "normal" }}>under 6 months</em>.
           </h1>
           <p className="lead">
             BINA+ is a Shah Alam–based design-and-build studio. We plan, design and construct

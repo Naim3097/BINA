@@ -59,10 +59,10 @@ const EN_DEFAULTS = {
     sub: "Design-and-build projects across the Klang Valley. Swipe to explore.",
   },
   cards: [
-    { href: "/case-studies", img: "/assets/assets/house 1.jpg", alt: "Single-storey home, 1,200 sqft", year: "01 · Jalan Batu Muda", title: "Design & Build" },
-    { href: "/case-studies", img: "/assets/assets/sekinchan.png", alt: "Sekinchan Field House", year: "02 · Sekinchan", title: "Field House" },
-    { href: "/case-studies", img: "/assets/assets/courtyard renewal.png", alt: "Modern Courtyard Renewal renovation", year: "03 · Klang", title: "Modern Courtyard Renewal" },
-    { href: "/case-studies", img: "/assets/assets/ervina 6.png", alt: "Ervina kitchen renovation, Petaling Jaya", year: "04 · Bukit Jelutong", title: "Ervina" },
+    { href: "/case-studies", img: "/assets/assets/house 1.jpg", alt: "Single-storey home, 1,200 sqft", year: "01 · Batu Muda, Gombak", title: "Linear Grey House" },
+    { href: "/case-studies", img: "/assets/assets/sekinchan.png", alt: "Sekinchan Field House", year: "02 · Sekinchan, Selangor", title: "Sawah & Teduh, Makngah Tiny House" },
+    { href: "/case-studies", img: "/assets/assets/courtyard renewal.png", alt: "Modern Courtyard Renewal renovation", year: "03 · Taman Andalas, Klang", title: "Re:Putih House" },
+    { href: "/case-studies", img: "/assets/assets/ervina 6.png", alt: "Ervina kitchen renovation, Petaling Jaya", year: "04 · Ara Sendayan, Negeri Sembilan", title: "The Horizon" },
   ] as CatalogCard[],
   cta: {
     eyebrow: "12+ projects delivered",

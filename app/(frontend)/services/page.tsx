@@ -84,7 +84,7 @@ export default function ServicesEn() {
           <Reveal delay={1} className="page-hero__media">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1100&q=80&auto=format&fit=crop"
+              src="/assets/assets/sekinchan%201.png"
               alt="Modern interior design"
               loading="eager"
             />
