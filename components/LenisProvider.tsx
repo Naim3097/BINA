@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import Lenis from "lenis";
 
 export default function LenisProvider({
@@ -8,6 +9,13 @@ export default function LenisProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const pathname = usePathname();
+
+  // Scroll to top on every route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   useEffect(() => {
     const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
     const isCoarse = matchMedia("(pointer: coarse)").matches;
