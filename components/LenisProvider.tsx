@@ -18,14 +18,15 @@ export default function LenisProvider({
 
   useEffect(() => {
     const prefersReduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const isCoarse = matchMedia("(pointer: coarse)").matches;
-    if (prefersReduced || isCoarse) return;
+    if (prefersReduced) return;
 
     const lenis = new Lenis({
-      duration: 1.2,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      duration: 1.1,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
       smoothWheel: true,
       wheelMultiplier: 1,
+      touchMultiplier: 1.5,
+      lerp: 0.1,
     });
 
     let rafId = 0;

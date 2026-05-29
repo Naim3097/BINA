@@ -11,7 +11,6 @@ import CtaStrip from "@/components/CtaStrip";
 export default function Home() {
   return (
     <>
-      <a href="#main" className="skip">Skip to content</a>
       <Header locale="en" current="home" altHref="/ms" selfHref="/" />
       <main id="main">
         <VideoHero />

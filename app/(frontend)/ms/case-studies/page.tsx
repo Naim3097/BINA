@@ -48,7 +48,6 @@ export default async function CaseStudiesMs() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <LangSetter locale="ms" />
-      <a href="#main" className="skip">Langkau ke kandungan</a>
       <Header locale="ms" current="caseStudies" altHref="/case-studies" selfHref="/ms/case-studies" />
 
       <main id="main">

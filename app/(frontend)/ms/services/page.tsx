@@ -44,7 +44,6 @@ export default function ServicesMs() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }}
       />
       <LangSetter locale="ms" />
-      <a href="#main" className="skip">Langkau ke kandungan</a>
       <Header locale="ms" current="services" altHref="/services" selfHref="/ms/services" />
 
       <main id="main">

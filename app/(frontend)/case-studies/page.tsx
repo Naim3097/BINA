@@ -45,7 +45,6 @@ export default async function CaseStudiesEn() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <a href="#main" className="skip">Skip to content</a>
       <Header locale="en" current="caseStudies" altHref="/ms/case-studies" selfHref="/case-studies" />
 
       <main id="main">

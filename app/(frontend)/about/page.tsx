@@ -45,7 +45,6 @@ export default function AboutEn() {
           __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
         }}
       />
-      <a href="#main" className="skip">Skip to content</a>
       <Header locale="en" current="about" altHref="/ms/about" selfHref="/about" />
 
       <main id="main">

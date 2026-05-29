@@ -49,7 +49,6 @@ export default function AboutMs() {
         }}
       />
       <LangSetter locale="ms" />
-      <a href="#main" className="skip">Langkau ke kandungan</a>
       <Header locale="ms" current="about" altHref="/about" selfHref="/ms/about" />
 
       <main id="main">

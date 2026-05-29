@@ -115,7 +115,6 @@ export default function ServicesEn() {
                   <li>Construction &amp; certified site supervision</li>
                   <li>Material &amp; detail coordination end-to-end</li>
                 </ul>
-
                 <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head">
@@ -123,13 +122,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">For smaller homes.</p>
                     </div>
                     <div className="tier__spec">~1,200 sqft · Single-storey</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM200k</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Design &amp; build</li>
                       <li>Layout planning</li>
@@ -144,13 +138,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Space, value &amp; comfort.</p>
                     </div>
                     <div className="tier__spec">~1,500 sqft · Semi-double</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM350k</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM350k</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Enhanced space planning</li>
                       <li>Premium materials</li>
@@ -164,13 +153,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Luxury, fully maximised.</p>
                     </div>
                     <div className="tier__spec">~2,000 sqft · Double-storey</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM460k</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM460k</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Custom design</li>
                       <li>High-end finishes</li>
@@ -180,24 +164,14 @@ export default function ServicesEn() {
                   </div>
                 </div>
                 <div className="tier-footer">
-                  <div className="tier-footer__stat">
-                    <span className="tier-footer__num">50+</span>
-                    <span>Homes built</span>
-                  </div>
-                  <div className="tier-footer__stat">
-                    <span className="tier-footer__num">Certified</span>
-                    <span>engineers &amp; contractors</span>
-                  </div>
-                  <div className="tier-footer__stat">
-                    <span className="tier-footer__num">Weekly</span>
-                    <span>updates &amp; site photos</span>
-                  </div>
+                  <div className="tier-footer__stat"><span className="tier-footer__num">50+</span><span>Homes built</span></div>
+                  <div className="tier-footer__stat"><span className="tier-footer__num">Certified</span><span>engineers &amp; contractors</span></div>
+                  <div className="tier-footer__stat"><span className="tier-footer__num">Weekly</span><span>updates &amp; site photos</span></div>
                 </div>
                 <div className="gifts-strip">
-                  <strong>Free gifts included with every package:</strong>
+                  <strong>Free gifts included with every package:</strong>{" "}
                   3D design · installation wiring · quotation · 8ft table top · downlight fittings
-                  · sink &amp; hood installation · smart lock · fan fittings · safety door · site
-                  visit
+                  · sink &amp; hood installation · smart lock · fan fittings · safety door · site visit
                 </div>
               </div>
             </Reveal>
@@ -210,14 +184,11 @@ export default function ServicesEn() {
               <div className="svc__body" id="renovation" style={{ marginTop: 24 }}>
                 <span className="eyebrow">02 · Renovation</span>
                 <h2>Upgrade what&apos;s already yours.</h2>
-                <div className="svc__price">
-                  <small>From</small>RM100,000
-                </div>
+                <div className="svc__price"><small>From</small>RM100,000</div>
                 <p className="lead">
                   From a single-room refresh to full-home transformations. Three tiers, each with a
                   defined scope so you know exactly what to expect.
                 </p>
-
                 <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head">
@@ -225,13 +196,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Focused refresh.</p>
                     </div>
                     <div className="tier__spec">1–2 area renovation</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM100k</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM100k</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Basic finishes &amp; carpentry</li>
                       <li>1 wet or dry area</li>
@@ -246,13 +212,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Modern living upgrade.</p>
                     </div>
                     <div className="tier__spec">Kitchen + living + carpentry</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM200k</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Kitchen &amp; living</li>
                       <li>Built-in carpentry</li>
@@ -266,13 +227,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Full home reset.</p>
                     </div>
                     <div className="tier__spec">Whole-home renovation</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM300k</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM300k</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Complete interior overhaul</li>
                       <li>Premium finishes</li>
@@ -296,9 +252,7 @@ export default function ServicesEn() {
               <div className="svc__body" id="interior" style={{ marginTop: 24 }}>
                 <span className="eyebrow">03 · Interior Design</span>
                 <h2>Design-only, if that&apos;s all you need.</h2>
-                <div className="svc__price">
-                  <small>From</small>RM19,999
-                </div>
+                <div className="svc__price"><small>From</small>RM19,999</div>
                 <p className="lead">
                   For homeowners who want a polished design package they can hand to their own
                   contractor — or just to visualise before committing.
@@ -307,7 +261,6 @@ export default function ServicesEn() {
                   <li>Layout planning &amp; space optimisation</li>
                   <li>Moodboard &amp; concept direction</li>
                 </ul>
-
                 <div className="tier-grid tier-grid--2">
                   <div className="tier">
                     <div className="tier__head">
@@ -315,13 +268,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Design starter.</p>
                     </div>
                     <div className="tier__spec">Key rooms covered</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM49,999</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM49,999</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>3D visualisation</li>
                       <li>Technical drawings</li>
@@ -336,13 +284,8 @@ export default function ServicesEn() {
                       <p className="tier__tag">Full interior solution.</p>
                     </div>
                     <div className="tier__spec">Complete home coverage</div>
-                    <div className="tier__price">
-                      <small>FROM</small>
-                      <strong>RM59,999</strong>
-                    </div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">
-                      Enquire →
-                    </a>
+                    <div className="tier__price"><small>FROM</small><strong>RM59,999</strong></div>
+                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
                     <ul className="tier__feats">
                       <li>Everything in 7-in-1</li>
                       <li>Full documentation set</li>

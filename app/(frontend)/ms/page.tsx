@@ -68,7 +68,6 @@ export default function HomeMs() {
         }}
       />
       <LangSetter locale="ms" />
-      <a href="#main" className="skip">Langkau ke kandungan</a>
       <Header locale="ms" current="home" altHref="/" selfHref="/ms" />
 
       <main id="main">
