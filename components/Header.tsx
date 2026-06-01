@@ -12,7 +12,7 @@ type Props = {
   /** Path of the current page (for the active-language link). */
   selfHref: string;
   /** Which nav item should be marked aria-current="page". */
-  current?: "home" | "about" | "services" | "caseStudies";
+  current?: "home" | "about" | "services" | "caseStudies" | "blog" | "contact";
 };
 
 export default function Header({ locale, altHref, selfHref, current }: Props) {
@@ -43,7 +43,7 @@ export default function Header({ locale, altHref, selfHref, current }: Props) {
   }, [drawerOpen]);
 
   const navItem = (
-    key: "home" | "about" | "services" | "caseStudies",
+    key: "home" | "about" | "services" | "caseStudies" | "blog" | "contact",
     href: string,
     label: string
   ) => (
@@ -68,14 +68,13 @@ export default function Header({ locale, altHref, selfHref, current }: Props) {
               {navItem("about", r.about, d.nav.about)}
               {navItem("services", r.services, d.nav.services)}
               {navItem("caseStudies", r.caseStudies, d.nav.caseStudies)}
+              {navItem("blog", r.blog, d.nav.blog)}
+              {navItem("contact", r.contact, d.nav.contact)}
             </ul>
           </nav>
           <div className="nav__right">
             <LangSwitcher locale={locale} altHref={altHref} selfHref={selfHref} variant="short" />
-            <a href="tel:+60193428981" className="nav__phone">
-              +60 19-342 8981
-            </a>
-            <a href={contactHash} className="btn btn--ghost">
+            <a href={contactHash} className="btn btn--primary nav__quote">
               {d.nav.getQuote}
             </a>
             <button
@@ -130,6 +129,16 @@ export default function Header({ locale, altHref, selfHref, current }: Props) {
           <li>
             <Link href={r.caseStudies} onClick={() => setDrawerOpen(false)}>
               {d.nav.caseStudies}
+            </Link>
+          </li>
+          <li>
+            <Link href={r.blog} onClick={() => setDrawerOpen(false)}>
+              {d.nav.blog}
+            </Link>
+          </li>
+          <li>
+            <Link href={r.contact} onClick={() => setDrawerOpen(false)}>
+              {d.nav.contact}
             </Link>
           </li>
         </ul>

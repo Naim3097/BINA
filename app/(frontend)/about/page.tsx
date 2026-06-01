@@ -160,7 +160,10 @@ export default function AboutEn() {
                   was promised — sitting in on every briefing and visiting sites mid-pour. His
                   approach: one studio, one manager, no surprises.
                 </p>
-                <a href="https://wa.me/60193428981" className="team-principal__cta">
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like to get in touch about a potential project.")}`}
+                  className="team-principal__cta"
+                >
                   Get in touch →
                 </a>
               </div>
@@ -239,8 +242,11 @@ export default function AboutEn() {
                 >
                   Get directions
                 </a>
-                <a href="https://wa.me/60193428981" className="btn btn--ghost">
-                  WhatsApp us
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like to drop by the studio — can you confirm a good time?")}`}
+                  className="btn btn--ghost"
+                >
+                  Message us
                 </a>
               </div>
             </Reveal>

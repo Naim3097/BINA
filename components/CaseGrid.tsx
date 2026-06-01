@@ -67,7 +67,7 @@ export const EN_CARDS: CardData[] = [
     location: "USIM, Negeri Sembilan",
     year: "2025",
     title: "Ummi Maktum, Usim",
-    priceLine: "Interior 9-in-1 · full home · RM59,999",
+    priceLine: "Interior ID PLUS · full home · RM59,000",
   },
   {
     id: "kajang",
@@ -87,7 +87,7 @@ export const EN_CARDS: CardData[] = [
     location: "Cyberjaya, Selangor",
     year: "2024",
     title: "The Cyber Loft",
-    priceLine: "Interior 7-in-1 · 1,100 sqft · RM49,999",
+    priceLine: "Interior ID START · 1,100 sqft · RM39,000",
   },
   {
     id: "ampang",

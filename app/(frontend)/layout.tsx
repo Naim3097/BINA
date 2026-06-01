@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import LenisProvider from "@/components/LenisProvider";
+import WhatsAppFab from "@/components/WhatsAppFab";
 
 const jakarta = localFont({
   src: [
@@ -24,14 +25,14 @@ const siteUrl = "https://bina.designbuild";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "BINA+ Design & Build — Turnkey Homes & Renovation in Selangor",
+  title: "BINA+ Design & Build — Move-in Ready Homes & Renovation in Selangor",
   description:
-    "BINA+ is a Malaysian design-and-build studio crafting turnkey homes, renovations and interior design across the Klang Valley. From RM200k. Single-storey to double-storey, full project management included.",
+    "BINA+ is a Malaysian design-and-build studio crafting move-in ready homes, renovations and interior design across the Klang Valley. From RM200k. Single-storey to double-storey, full project management included.",
   alternates: { canonical: "/" },
   robots: { index: true, follow: true, "max-image-preview": "large" },
   openGraph: {
     type: "website",
-    title: "BINA+ Design & Build — Turnkey Homes & Renovation",
+    title: "BINA+ Design & Build — Move-in Ready Homes & Renovation",
     description: "End-to-end design, build and renovation in Shah Alam, Selangor. From RM200k.",
     url: "/",
     images: [
@@ -85,7 +86,11 @@ const jsonLd = {
       closes: "13:00",
     },
   ],
-  sameAs: ["https://www.instagram.com/bina.byboxup"],
+  sameAs: [
+    "https://www.instagram.com/bina.byboxup/",
+    "https://www.facebook.com/share/1CiR3MgS5e/",
+    "https://www.tiktok.com/@bina.byboxup",
+  ],
 };
 
 export default function RootLayout({
@@ -101,6 +106,7 @@ export default function RootLayout({
           }}
         />
         <LenisProvider>{children}</LenisProvider>
+        <WhatsAppFab />
       </body>
     </html>
   );

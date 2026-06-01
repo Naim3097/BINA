@@ -56,7 +56,7 @@ export default function AboutMs() {
           <Reveal>
             <div className="crumbs">
               <Link href="/ms">Utama</Link>
-              <span>/</span> Tentang
+              <span>/</span> Tentang Kami
             </div>
             <span className="eyebrow">Kisah kami</span>
             <h1>
@@ -142,22 +142,25 @@ export default function AboutMs() {
               <div className="team-principal__body">
                 <span className="eyebrow">Prinsipal</span>
                 <h2 className="team-principal__name">Syafiq</h2>
-                <p className="team-principal__role">Prinsipal &amp; Pengasas Bersama</p>
+                <p className="team-principal__role">Pengarah (Pemasaran &amp; Strategi)</p>
                 <p className="team-principal__bio">
                   Syafiq mengetuai setiap projek dari konsep hingga serahan. Dengan latar belakang
                   reka-bina, dialah orangnya yang memastikan apa yang dibina benar-benar sepadan
                   dengan apa yang dijanjikan — turut serta dalam setiap taklimat dan melawat tapak
                   ketika konkrit dituang. Pendekatannya: satu studio, satu pengurus, tiada kejutan.
                 </p>
-                <a href="https://wa.me/60193428981" className="team-principal__cta">
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin berhubung mengenai projek yang berpotensi.")}`}
+                  className="team-principal__cta"
+                >
                   Hubungi kami →
                 </a>
               </div>
               <div className="team-principal__media">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=700&q=80&auto=format&fit=crop"
-                  alt="Syafiq — Prinsipal & Pengasas Bersama"
+                  src="/assets/assets/syafiq%20bina.jpeg"
+                  alt="Syafiq — Pengarah (Pemasaran & Strategi)"
                   loading="lazy"
                 />
               </div>
@@ -168,40 +171,40 @@ export default function AboutMs() {
               <h3>Pasukan kami</h3>
             </Reveal>
             <div className="team-row">
-              <Reveal as="article" delay={1} className="team__card">
+              <Reveal as="article" className="team__card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&q=80&auto=format&fit=crop"
-                  alt="Aisyah — Pengurus Projek"
+                  src="/assets/assets/zulma%27arif%20bina.jpeg"
+                  alt="Zulma'Arif — Pengarah (Projek & Operasi)"
                   loading="lazy"
                 />
                 <div>
-                  <h3>Aisyah</h3>
-                  <span>Pengurus Projek</span>
+                  <h3>Zulma&apos;Arif</h3>
+                  <span>Pengarah (Projek &amp; Operasi)</span>
+                </div>
+              </Reveal>
+              <Reveal as="article" delay={1} className="team__card">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/assets/assets/muhaimin%20bina.jpeg"
+                  alt="Muhaimin — Pengarah (Penyelarasan & Sokongan)"
+                  loading="lazy"
+                />
+                <div>
+                  <h3>Muhaimin</h3>
+                  <span>Pengarah (Penyelarasan &amp; Sokongan)</span>
                 </div>
               </Reveal>
               <Reveal as="article" delay={2} className="team__card">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80&auto=format&fit=crop"
-                  alt="Hakim — Penyelia Tapak"
-                  loading="lazy"
-                />
-                <div>
-                  <h3>Hakim</h3>
-                  <span>Penyelia Tapak</span>
-                </div>
-              </Reveal>
-              <Reveal as="article" delay={3} className="team__card">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=500&q=80&auto=format&fit=crop"
-                  alt="Syahmi — Ketua Pereka"
+                  src="/assets/assets/syahmi%20bina.jpeg"
+                  alt="Syahmi — Pengarah (Reka Bentuk & Kreatif)"
                   loading="lazy"
                 />
                 <div>
                   <h3>Syahmi</h3>
-                  <span>Ketua Pereka</span>
+                  <span>Pengarah (Reka Bentuk &amp; Kreatif)</span>
                 </div>
               </Reveal>
             </div>
@@ -228,8 +231,11 @@ export default function AboutMs() {
                 >
                   Dapatkan arah
                 </a>
-                <a href="https://wa.me/60193428981" className="btn btn--ghost">
-                  WhatsApp kami
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin melawat studio — boleh sahkan masa yang sesuai?")}`}
+                  className="btn btn--ghost"
+                >
+                  Hantar mesej
                 </a>
               </div>
             </Reveal>
