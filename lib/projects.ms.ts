@@ -39,37 +39,37 @@ export const PROJECTS_MS: Record<string, Project> = {
   },
   subang: {
     id: "subang",
-    eyebrow: "Reka & Bina · BINA PLUS",
-    title: "Pavilion Subang",
-    location: "Subang Jaya, Selangor",
+    eyebrow: "Reka & Bina · BINA START",
+    title: "Sawah & Teduh, Rumah Kecil Makngah",
+    location: "Sekinchan, Selangor",
     year: "2024",
-    hero: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=1800&q=80&auto=format&fit=crop",
+    hero: "/assets/assets/sekinchan.png",
     lead:
-      "Rumah pavilion separuh-dua-tingkat dibina sekitar halaman taman tengah — ruang tamu cerah di bawah, sayap bilik tidur peribadi di atas.",
+      "Rumah kecil setingkat di tepi sawah Sekinchan — bentuk pavilion yang tenang, bumbung berpic dan kaca penuh ketinggian membuka ke halaman taman.",
     specs: [
-      { k: "Pakej", v: "BINA PLUS" },
-      { k: "Keluasan binaan", v: "1,500 kps" },
-      { k: "Jenis", v: "Separuh dua tingkat" },
-      { k: "Bilik tidur", v: "4 bilik · 3 mandi" },
-      { k: "Tempoh", v: "6 bulan" },
-      { k: "Harga", v: "dari RM350,000" },
+      { k: "Pakej", v: "BINA START" },
+      { k: "Keluasan binaan", v: "1,200 kps" },
+      { k: "Jenis", v: "Setingkat" },
+      { k: "Bilik tidur", v: "3 bilik · 2 mandi" },
+      { k: "Tempoh", v: "5 bulan" },
+      { k: "Harga", v: "dari RM180,000" },
     ],
     plan: {
-      img: "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=80&auto=format&fit=crop",
-      caption: "Pelan dua-zon · tingkat bawah awam · sayap bilik tidur atas",
+      img: "/assets/assets/sekinchan 1.png",
+      caption: "Bentuk minimal — siluet bumbung berpic, muka luar desa yang tenang",
     },
     intent:
-      "Keluarga muda berempat memerlukan cahaya siang tanpa kehilangan privasi dari jalan. Kami membahagikan program merentasi dua aras dan membungkus sisi taman dalam kaca penuh ketinggian, meninggalkan muka jalan sebagai fasad skrin kayu yang tenang.",
-    materials: ["Skrin tegak spotted-gum", "Plaster digilap", "Lantai travertine dihalus", "Bingkai tingkap teranodisasi hitam", "Kerja kayu oak putih"],
+      "Sebuah rumah persaraan kecil yang sengaja dibuat sederhana — satu bentuk pavilion yang bersih membuka ke halaman taman, dengan kaca penuh ketinggian membawa sawah masuk ke dalam ruang hidup.",
+    materials: ["Skrin kayu tegak", "Plaster digilap", "Lantai travertine dihalus", "Bingkai tingkap teranodisasi hitam", "Kerja kayu oak putih"],
     gallery: [
-      { img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80&auto=format&fit=crop", cap: "Sayap tamu menghadap halaman taman" },
-      { img: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?w=900&q=80&auto=format&fit=crop", cap: "Lubang tangga, cahaya atas" },
-      { img: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=900&q=80&auto=format&fit=crop", cap: "Suite induk, balkoni berskrin" },
+      { img: "/assets/assets/sekinchan 4.png", cap: "Halaman taman — bentuk pavilion dengan kaca penuh ketinggian" },
+      { img: "/assets/assets/sekinchan 2.png", cap: "Sayap tamu menghadap halaman taman" },
+      { img: "/assets/assets/sekinchan 3.png", cap: "Sayap bilik tidur, beranda berskrin" },
     ],
     highlights: [
       { n: "01", t: "Pelan taman dahulu", d: "Setiap bilik kediaman membuka ke halaman tengah." },
-      { n: "02", t: "Muka jalan tenang", d: "Skrin kayu menghalang matahari barat dan pandangan biasa." },
-      { n: "03", t: "Bumbung sedia solar", d: "Titik pemasangan solar PV 8kWp pra-pasang." },
+      { n: "02", t: "Muka luar tenang", d: "Skrin kayu menghalang matahari dan pandangan biasa." },
+      { n: "03", t: "Sesuai iklim", d: "Pengudaraan silang menjaga dalaman sejuk secara semula jadi." },
     ],
   },
   u5: {
@@ -149,10 +149,10 @@ export const PROJECTS_MS: Record<string, Project> = {
   pj: {
     id: "pj",
     eyebrow: "Renovasi",
-    title: "Penyegaran Dapur PJ",
+    title: "Ervina",
     location: "Petaling Jaya, Selangor",
     year: "2025",
-    hero: "https://images.unsplash.com/photo-1556909114-44e3e9399a2f?w=1800&q=80&auto=format&fit=crop",
+    hero: "/assets/assets/ervina 6.png",
     lead:
       "Reset dapur dan ruang tamu bersebelahan untuk pasangan muda yang memasak setiap malam — aliran kerja lebih baik, cahaya lebih baik, dengan keluasan asal.",
     specs: [
@@ -164,16 +164,19 @@ export const PROJECTS_MS: Record<string, Project> = {
       { k: "Harga", v: "RM200,000" },
     ],
     plan: {
-      img: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=1400&q=80&auto=format&fit=crop",
-      caption: "Dapur galley → aliran kerja island · pass-through ke tamu",
+      img: "/assets/assets/ervina 7.png",
+      caption: "Aliran kerja island — dapur dibuka ke ruang tamu",
     },
     intent:
       "Dapur galley asal memaksa dua tukang masak melepasi satu sama lain. Kami menanggalkan dinding pembahagi, menggantikannya dengan island 2.4m, dan mendorong rangkaian peralatan ke dinding belakang supaya aliran kerja mengalir dalam satu arah.",
     materials: ["Carcass kabinet birch-ply", "Atas island batu tersinter", "Jubin splashback berkaca tangan", "Perkakas paip tembaga", "Lantai oak engineered"],
     gallery: [
-      { img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80&auto=format&fit=crop", cap: "Pandangan island ke makan" },
-      { img: "https://images.unsplash.com/photo-1600210491969-aab3a3a8b4a6?w=900&q=80&auto=format&fit=crop", cap: "Rangkaian peralatan + pantri tinggi" },
-      { img: "https://images.unsplash.com/photo-1600573472556-e636c2acda88?w=900&q=80&auto=format&fit=crop", cap: "Ruang tamu, sambungan baharu" },
+      { img: "/assets/assets/ervina 5.png", cap: "Island dapur, siap" },
+      { img: "/assets/assets/ervina 4.png", cap: "Rangkaian peralatan + pantri tinggi" },
+      { img: "/assets/assets/ervina 8.png", cap: "Ruang tamu, kerja kayu baharu" },
+      { img: "/assets/assets/ervina 14.png", cap: "Ruang terbuka, dapur dalam pandangan" },
+      { img: "/assets/assets/ervina 16.png", cap: "Gambaran penuh dapur, island + rangkaian basah" },
+      { img: "/assets/assets/ervina 15.png", cap: "Dinding ciri TV + kerja kayu tersuai" },
     ],
     highlights: [
       { n: "01", t: "Soft-close untuk semua", d: "Pelari dan engsel Blum, waranti seumur hidup." },
@@ -183,7 +186,7 @@ export const PROJECTS_MS: Record<string, Project> = {
   },
   usj: {
     id: "usj",
-    eyebrow: "Dalaman · 9-dalam-1",
+    eyebrow: "Dalaman · ID PLUS",
     title: "Ummi Maktum, Usim",
     location: "USIM, Negeri Sembilan",
     year: "2025",
@@ -191,12 +194,12 @@ export const PROJECTS_MS: Record<string, Project> = {
     lead:
       "Pakej dalaman lengkap untuk keluarga muda berpindah ke binaan baharu — lantai, siling, langsir, dapur, almari, cat, lampu, konsol TV dan set makan, semuanya dalam satu kontrak.",
     specs: [
-      { k: "Pakej", v: "Dalaman 9-dalam-1" },
+      { k: "Pakej", v: "Dalaman ID PLUS" },
+      { k: "Siri", v: "Laminated" },
       { k: "Liputan", v: "Rumah penuh" },
       { k: "Bilik tidur", v: "4 bilik · 3 mandi" },
-      { k: "Item dihantar", v: "9 kategori" },
       { k: "Tempoh", v: "5 minggu" },
-      { k: "Harga", v: "RM59,999" },
+      { k: "Harga", v: "RM59,000" },
     ],
     plan: {
       img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400&q=80&auto=format&fit=crop",
@@ -253,7 +256,7 @@ export const PROJECTS_MS: Record<string, Project> = {
   },
   cyber: {
     id: "cyber",
-    eyebrow: "Dalaman · 7-dalam-1",
+    eyebrow: "Dalaman · ID START",
     title: "Loft Cyber",
     location: "Cyberjaya, Selangor",
     year: "2024",
@@ -261,12 +264,12 @@ export const PROJECTS_MS: Record<string, Project> = {
     lead:
       "Pemasangan pangsapuri perkhidmatan untuk profesional muda yang bekerja jauh — zon kerja fleksibel, zon tidur tenang, dapur lapang untuk satu bilik tidur.",
     specs: [
-      { k: "Pakej", v: "Dalaman 7-dalam-1" },
+      { k: "Pakej", v: "Dalaman ID START" },
+      { k: "Siri", v: "Melamine" },
       { k: "Keluasan binaan", v: "1,100 kps" },
       { k: "Susun atur", v: "1 bilik · 1 belajar · 1 mandi" },
-      { k: "Item dihantar", v: "7 kategori" },
       { k: "Tempoh", v: "3 minggu" },
-      { k: "Harga", v: "RM49,999" },
+      { k: "Harga", v: "RM39,000" },
     ],
     plan: {
       img: "https://images.unsplash.com/photo-1556909114-44e3e9399a2f?w=1400&q=80&auto=format&fit=crop",
@@ -338,12 +341,12 @@ export const MS_CARDS: CardData[] = [
   {
     id: "subang",
     category: "design-build",
-    img: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=800&q=80&auto=format&fit=crop",
-    alt: "Rumah separuh-dua-tingkat Subang Jaya",
-    location: "Subang Jaya, Selangor",
+    img: "/assets/assets/sekinchan.png",
+    alt: "Rumah kecil setingkat Sekinchan",
+    location: "Sekinchan, Selangor",
     year: "2024",
-    title: "Pavilion Subang",
-    priceLine: "BINA PLUS · 1,500 kps · dari RM350,000",
+    title: "Sawah & Teduh, Rumah Kecil Makngah",
+    priceLine: "BINA START · 1,200 kps · dari RM180,000",
   },
   {
     id: "u5",
@@ -368,11 +371,11 @@ export const MS_CARDS: CardData[] = [
   {
     id: "pj",
     category: "renovation",
-    img: "https://images.unsplash.com/photo-1556909114-44e3e9399a2f?w=800&q=80&auto=format&fit=crop",
-    alt: "Renovasi dapur Petaling Jaya",
+    img: "/assets/assets/ervina 6.png",
+    alt: "Renovasi dapur Ervina, Petaling Jaya",
     location: "Petaling Jaya, Selangor",
     year: "2025",
-    title: "Penyegaran Dapur PJ",
+    title: "Ervina",
     priceLine: "Renovasi · dapur + ruang tamu · RM200,000",
   },
   {
@@ -383,7 +386,7 @@ export const MS_CARDS: CardData[] = [
     location: "USIM, Negeri Sembilan",
     year: "2025",
     title: "Ummi Maktum, Usim",
-    priceLine: "Dalaman 9-dalam-1 · rumah penuh · RM59,999",
+    priceLine: "Dalaman ID PLUS · rumah penuh · RM59,000",
   },
   {
     id: "kajang",
@@ -403,7 +406,7 @@ export const MS_CARDS: CardData[] = [
     location: "Cyberjaya, Selangor",
     year: "2024",
     title: "Loft Cyber",
-    priceLine: "Dalaman 7-dalam-1 · 1,100 kps · RM49,999",
+    priceLine: "Dalaman ID START · 1,100 kps · RM39,000",
   },
   {
     id: "ampang",

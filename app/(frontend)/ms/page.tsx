@@ -10,9 +10,9 @@ import LangSetter from "@/components/LangSetter";
 const siteUrl = "https://bina.designbuild";
 
 export const metadata: Metadata = {
-  title: "BINA+ Reka & Bina — Rumah Siap Kunci & Renovasi di Selangor",
+  title: "BINA+ Reka & Bina — Rumah Sedia Masuk & Renovasi di Selangor",
   description:
-    "BINA+ ialah studio reka-dan-bina Malaysia yang membina rumah siap kunci, renovasi dan reka bentuk dalaman di seluruh Lembah Klang. Bermula RM200k. Setingkat hingga dua tingkat, pengurusan projek penuh disertakan.",
+    "BINA+ ialah studio reka-dan-bina Malaysia yang membina rumah sedia masuk, renovasi dan reka bentuk dalaman di seluruh Lembah Klang. Bermula RM200k. Setingkat hingga dua tingkat, pengurusan projek penuh disertakan.",
   alternates: {
     canonical: "/ms",
     languages: {
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "ms_MY",
-    title: "BINA+ Reka & Bina — Rumah Siap Kunci & Renovasi",
+    title: "BINA+ Reka & Bina — Rumah Sedia Masuk & Renovasi",
     description: "Reka, bina dan renovasi hujung-ke-hujung di Shah Alam, Selangor. Bermula RM200k.",
     url: "/ms",
     images: [
@@ -55,7 +55,11 @@ const jsonLd = {
     { "@type": "OpeningHoursSpecification", dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "09:00", closes: "17:30" },
     { "@type": "OpeningHoursSpecification", dayOfWeek: "Saturday", opens: "09:00", closes: "13:00" },
   ],
-  sameAs: ["https://www.instagram.com/bina.byboxup"],
+  sameAs: [
+    "https://www.instagram.com/bina.byboxup/",
+    "https://www.facebook.com/share/1CiR3MgS5e/",
+    "https://www.tiktok.com/@bina.byboxup",
+  ],
 };
 
 export default function HomeMs() {
@@ -91,7 +95,7 @@ export default function HomeMs() {
             <Reveal className="hero__copy">
               <span className="eyebrow">Reka · Bina · Tinggal</span>
               <h1>
-                Rumah siap kunci dari <em>RM200k</em>, direka dan dibina{" "}
+                Rumah sedia masuk dari <em>RM200k</em>, direka dan dibina{" "}
                 <em>dalam 6 bulan</em>.
               </h1>
               <p className="lead">
@@ -122,7 +126,7 @@ export default function HomeMs() {
             <Reveal delay={1} className="hero__media">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80&auto=format&fit=crop"
+                src="/assets/assets/inear grey house 6.png"
                 alt="Rumah reka-dan-bina dua tingkat moden dengan sentuhan kayu hangat"
                 fetchPriority="high"
               />
@@ -191,11 +195,10 @@ export default function HomeMs() {
             sub: "Projek reka-dan-bina di seluruh Lembah Klang. Leret untuk meneroka.",
           }}
           cards={[
-            { href: "/ms/case-studies", img: "/assets/assets/house 1.jpg", alt: "Rumah setingkat, 1,200 kps", year: "01 · Jalan Batu Muda", title: "Reka & Bina" },
-            { href: "/ms/case-studies", img: "/assets/assets/sekinchan.png", alt: "Rumah Ladang Sekinchan", year: "02 · Sekinchan", title: "Rumah Ladang" },
-            { href: "/ms/case-studies", img: "https://images.unsplash.com/photo-1605276374104-dee2a0ed3cd6?w=1800&q=80&auto=format&fit=crop", alt: "Rumah dua tingkat, 2,000 kps", year: "03 · Shah Alam", title: "The Estate" },
-            { href: "/ms/case-studies", img: "/assets/assets/courtyard renewal.png", alt: "Renovasi Pembaharuan Halaman Moden", year: "04 · Klang", title: "Pembaharuan Halaman Moden" },
-            { href: "/ms/case-studies", img: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1800&q=80&auto=format&fit=crop", alt: "Vila moden, 2,400 kps", year: "05 · Bukit Jelutong", title: "The Villa" },
+            { href: "/ms/case-studies", img: "/assets/assets/house 1.jpg", alt: "Rumah setingkat, 1,200 kps", year: "01 · Batu Muda, Gombak", title: "Linear Grey House" },
+            { href: "/ms/case-studies", img: "/assets/assets/sekinchan.png", alt: "Rumah Ladang Sekinchan", year: "02 · Sekinchan, Selangor", title: "Sawah & Teduh, Rumah Kecil Makngah" },
+            { href: "/ms/case-studies", img: "/assets/assets/courtyard renewal.png", alt: "Renovasi Pembaharuan Halaman Moden", year: "03 · Taman Andalas, Klang", title: "Rumah Re:Putih" },
+            { href: "/ms/case-studies", img: "/assets/assets/ervina 6.png", alt: "Renovasi dapur Ervina", year: "04 · Ara Sendayan, Negeri Sembilan", title: "The Horizon" },
           ]}
           cta={{ eyebrow: "12+ projek disiapkan", title: "Lihat portfolio penuh.", href: "/ms/case-studies", btn: "Lihat semua projek" }}
           mfoot={{ eyebrow: "12+ projek disiapkan", title: "Lihat portfolio penuh.", href: "/ms/case-studies", btn: "Lihat semua projek" }}
@@ -272,7 +275,12 @@ export default function HomeMs() {
                 <p>Beritahu kami plot, bajet dan ringkasan kasar — kami akan kembali dalam satu hari bekerja dengan nota kebolehlaksanaan dan jangkaan kos kasar.</p>
               </div>
               <div className="cta-strip__actions">
-                <a href="https://wa.me/60193428981" className="btn btn--primary">WhatsApp Syafiq</a>
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin dapatkan nota kebolehlaksanaan — saya ada plot/ringkasan untuk dibincangkan.")}`}
+                  className="btn btn--primary"
+                >
+                  Hantar mesej
+                </a>
                 <a href="mailto:bina.designbuild@gmail.com" className="btn btn--ghost">E-mel kami</a>
               </div>
             </Reveal>

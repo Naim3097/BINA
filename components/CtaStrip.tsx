@@ -18,7 +18,12 @@ export default function CtaStrip() {
             </p>
           </div>
           <div className="cta-strip__actions">
-            <a href="https://wa.me/60193428981" className="btn btn--primary">WhatsApp Najiha</a>
+            <a
+              href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like a feasibility note — I have a plot/brief I'd like to discuss.")}`}
+              className="btn btn--primary"
+            >
+              Message us
+            </a>
             <a href="mailto:bina.designbuild@gmail.com" className="btn btn--ghost">Email us</a>
           </div>
         </Reveal>

@@ -79,7 +79,10 @@ export default async function CaseStudiesMs() {
               </p>
               <div className="cs-hero__cta">
                 <a href="#projects" className="btn btn--primary">Lihat projek</a>
-                <a href="https://wa.me/60193428981" className="btn btn--ghost btn--ghost-light">
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin mulakan projek — sila hantar nota kebolehlaksanaan.")}`}
+                  className="btn btn--ghost btn--ghost-light"
+                >
                   Mulakan projek
                 </a>
               </div>
@@ -92,7 +95,7 @@ export default async function CaseStudiesMs() {
             <Reveal className="cs-stats__media">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop"
+                src="/assets/assets/construction.png"
                 alt="Rumah disiapkan BINA+"
               />
               <span className="cs-stats__chip">Mengapa pelanggan pilih kami</span>
@@ -158,7 +161,12 @@ export default async function CaseStudiesMs() {
                 </p>
               </div>
               <div className="cta-strip__actions">
-                <a href="https://wa.me/60193428981" className="btn btn--primary">Mulakan projek</a>
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Salah satu projek anda menarik perhatian saya — boleh hantar nota kebolehlaksanaan skop serupa?")}`}
+                  className="btn btn--primary"
+                >
+                  Mulakan projek
+                </a>
                 <Link href="/ms/services" className="btn btn--ghost">Lihat pakej</Link>
               </div>
             </Reveal>

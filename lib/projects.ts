@@ -177,7 +177,7 @@ export const PROJECTS: Record<string, Project> = {
   },
   usj: {
     id: "usj",
-    eyebrow: "Interior · 9-in-1",
+    eyebrow: "Interior · ID PLUS",
     title: "Ummi Maktum, Usim",
     location: "USIM, Negeri Sembilan",
     year: "2025",
@@ -185,12 +185,12 @@ export const PROJECTS: Record<string, Project> = {
     lead:
       "A complete interior package for a young family moving into a new build — flooring, ceiling, curtains, kitchen, wardrobes, paint, lighting, TV console and dining set, all in one contract.",
     specs: [
-      { k: "Package", v: "Interior 9-in-1" },
+      { k: "Package", v: "Interior ID PLUS" },
+      { k: "Series", v: "Laminated" },
       { k: "Coverage", v: "Full home" },
       { k: "Bedrooms", v: "4 bed · 3 bath" },
-      { k: "Items delivered", v: "9 categories" },
       { k: "Duration", v: "5 weeks" },
-      { k: "Price", v: "RM59,999" },
+      { k: "Price", v: "RM59,000" },
     ],
     plan: {
       img: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1400&q=80&auto=format&fit=crop",
@@ -247,7 +247,7 @@ export const PROJECTS: Record<string, Project> = {
   },
   cyber: {
     id: "cyber",
-    eyebrow: "Interior · 7-in-1",
+    eyebrow: "Interior · ID START",
     title: "The Cyber Loft",
     location: "Cyberjaya, Selangor",
     year: "2024",
@@ -255,12 +255,12 @@ export const PROJECTS: Record<string, Project> = {
     lead:
       "A serviced-apartment fit-out for a remote-first young professional — flexible work zone, calm sleep zone, generous kitchen for a one-bedder.",
     specs: [
-      { k: "Package", v: "Interior 7-in-1" },
+      { k: "Package", v: "Interior ID START" },
+      { k: "Series", v: "Melamine" },
       { k: "Built-up", v: "1,100 sqft" },
       { k: "Layout", v: "1 bed · 1 study · 1 bath" },
-      { k: "Items delivered", v: "7 categories" },
       { k: "Duration", v: "3 weeks" },
-      { k: "Price", v: "RM49,999" },
+      { k: "Price", v: "RM39,000" },
     ],
     plan: {
       img: "https://images.unsplash.com/photo-1556909114-44e3e9399a2f?w=1400&q=80&auto=format&fit=crop",

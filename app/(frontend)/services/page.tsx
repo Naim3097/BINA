@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Services & Packages — BINA+ Design & Build",
   description:
-    "Design and build, renovation and interior design packages from BINA+. Single-storey homes from RM200k, double-storey from RM460k, renovations from RM100k. Includes 3D design, project management and free gifts.",
+    "Design and build, renovation and interior design packages from BINA+. Single-storey homes from RM200k, double-storey from RM460k, extensions from RM100k, interior design from RM39k. Includes 3D design, project management and free gifts.",
   alternates: {
     canonical: "/services",
     languages: {
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     title: "BINA+ Services — Design, Build, Renovate",
-    description: "Turnkey packages from RM100k. Fixed scope, fixed price, fixed timeline.",
+    description: "Move-in ready packages from RM100k. Fixed scope, fixed price, fixed timeline.",
     url: "/services",
   },
 };
@@ -46,7 +46,7 @@ const jsonLd = {
       position: 3,
       name: "Interior Design Package",
       provider: { "@type": "Organization", name: "BINA+ Design & Build" },
-      offers: { "@type": "Offer", price: "19999", priceCurrency: "MYR" },
+      offers: { "@type": "Offer", price: "39000", priceCurrency: "MYR" },
     },
   ],
 };
@@ -115,52 +115,47 @@ export default function ServicesEn() {
                   <li>Construction &amp; certified site supervision</li>
                   <li>Material &amp; detail coordination end-to-end</li>
                 </ul>
-                <div className="tier-grid">
+                <div className="tier-grid tier-grid--2">
                   <div className="tier">
                     <div className="tier__head">
                       <span className="tier__name">BINA START</span>
-                      <p className="tier__tag">For smaller homes.</p>
+                      <p className="tier__tag">Single-storey family home.</p>
                     </div>
-                    <div className="tier__spec">~1,200 sqft · Single-storey</div>
+                    <div className="tier__spec">1,200 sqft · 3 bed · 2 bath · Single-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the BINA START package (Design & Build · 1-storey, 1,200 sqft, 3 bed / 2 bath, from RM200k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
                     <ul className="tier__feats">
-                      <li>Design &amp; build</li>
-                      <li>Layout planning</li>
-                      <li>Cost-efficient build</li>
+                      <li>1-storey home, ~1,200 sqft</li>
+                      <li>3 bedrooms · 2 bathrooms</li>
+                      <li>Full design &amp; build delivery</li>
                     </ul>
                     <p className="tier__note">First-time homeowners</p>
                   </div>
                   <div className="tier tier--featured">
                     <div className="tier__badge">Most Popular</div>
                     <div className="tier__head">
-                      <span className="tier__name">BINA PLUS</span>
-                      <p className="tier__tag">Space, value &amp; comfort.</p>
-                    </div>
-                    <div className="tier__spec">~1,500 sqft · Semi-double</div>
-                    <div className="tier__price"><small>FROM</small><strong>RM350k</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
-                    <ul className="tier__feats">
-                      <li>Enhanced space planning</li>
-                      <li>Premium materials</li>
-                      <li>Priority management</li>
-                    </ul>
-                    <p className="tier__note">Top pick for families</p>
-                  </div>
-                  <div className="tier">
-                    <div className="tier__head">
                       <span className="tier__name">BINA MAX</span>
-                      <p className="tier__tag">Luxury, fully maximised.</p>
+                      <p className="tier__tag">Double-storey, fully maximised.</p>
                     </div>
-                    <div className="tier__spec">~2,000 sqft · Double-storey</div>
+                    <div className="tier__spec">2,000 sqft · 4 bed · 3 bath · Double-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM460k</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the BINA MAX package (Design & Build · 2-storey, 2,000 sqft, 4 bed / 3 bath, from RM460k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
                     <ul className="tier__feats">
-                      <li>Custom design</li>
-                      <li>High-end finishes</li>
-                      <li>Dedicated consultant</li>
+                      <li>2-storey home, ~2,000 sqft</li>
+                      <li>4 bedrooms · 3 bathrooms</li>
+                      <li>Premium finishes throughout</li>
                     </ul>
-                    <p className="tier__note">For those who want the best</p>
+                    <p className="tier__note">Families wanting more space</p>
                   </div>
                 </div>
                 <div className="tier-footer">
@@ -170,8 +165,8 @@ export default function ServicesEn() {
                 </div>
                 <div className="gifts-strip">
                   <strong>Free gifts included with every package:</strong>{" "}
-                  3D design · installation wiring · quotation · 8ft table top · downlight fittings
-                  · sink &amp; hood installation · smart lock · fan fittings · safety door · site visit
+                  3D design · 8ft table top · smart lock · safe back door · installation wiring
+                  · downlight fittings · fan fittings · site visit · quotation · sink · hood &amp; stove installation
                 </div>
               </div>
             </Reveal>
@@ -183,59 +178,59 @@ export default function ServicesEn() {
               </div>
               <div className="svc__body" id="renovation" style={{ marginTop: 24 }}>
                 <span className="eyebrow">02 · Renovation</span>
-                <h2>Upgrade what&apos;s already yours.</h2>
+                <h2>Extend the home you already own.</h2>
                 <div className="svc__price"><small>From</small>RM100,000</div>
                 <p className="lead">
-                  From a single-room refresh to full-home transformations. Three tiers, each with a
-                  defined scope so you know exactly what to expect.
+                  Add livable square footage to your existing home — a single-storey back
+                  extension or a full two-storey build-up. Two tiers, defined scope, fixed price.
                 </p>
-                <div className="tier-grid">
+                <div className="tier-grid tier-grid--2">
                   <div className="tier">
                     <div className="tier__head">
-                      <span className="tier__name">RM100k</span>
-                      <p className="tier__tag">Focused refresh.</p>
+                      <span className="tier__name">RENO START</span>
+                      <p className="tier__tag">Back extension.</p>
                     </div>
-                    <div className="tier__spec">1–2 area renovation</div>
+                    <div className="tier__spec">Single-storey rear extension</div>
                     <div className="tier__price"><small>FROM</small><strong>RM100k</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the RENO START package (single-storey back extension, from RM100k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
                     <ul className="tier__feats">
-                      <li>Basic finishes &amp; carpentry</li>
-                      <li>1 wet or dry area</li>
-                      <li>Standard materials</li>
+                      <li>Single-floor rear extension</li>
+                      <li>Structural &amp; finishing works</li>
+                      <li>Permits &amp; plans included</li>
                     </ul>
-                    <p className="tier__note">Room upgrades</p>
+                    <p className="tier__note">Add living space at the back</p>
                   </div>
                   <div className="tier tier--featured">
                     <div className="tier__badge">Most Popular</div>
                     <div className="tier__head">
-                      <span className="tier__name">RM200k</span>
-                      <p className="tier__tag">Modern living upgrade.</p>
+                      <span className="tier__name">RENO PLUS</span>
+                      <p className="tier__tag">2-storey extension.</p>
                     </div>
-                    <div className="tier__spec">Kitchen + living + carpentry</div>
+                    <div className="tier__spec">Full two-storey extension</div>
                     <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the RENO PLUS package (full 2-storey extension, from RM200k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
                     <ul className="tier__feats">
-                      <li>Kitchen &amp; living</li>
-                      <li>Built-in carpentry</li>
-                      <li>Plumbing &amp; M&amp;E</li>
+                      <li>Full 2-storey extension</li>
+                      <li>Engineered structure &amp; roof</li>
+                      <li>Finishes &amp; permits</li>
                     </ul>
-                    <p className="tier__note">Most chosen</p>
+                    <p className="tier__note">Maximise your floor area</p>
                   </div>
-                  <div className="tier">
-                    <div className="tier__head">
-                      <span className="tier__name">RM300k</span>
-                      <p className="tier__tag">Full home reset.</p>
-                    </div>
-                    <div className="tier__spec">Whole-home renovation</div>
-                    <div className="tier__price"><small>FROM</small><strong>RM300k</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
-                    <ul className="tier__feats">
-                      <li>Complete interior overhaul</li>
-                      <li>Premium finishes</li>
-                      <li>Structural updates</li>
-                    </ul>
-                    <p className="tier__note">Full transformation</p>
-                  </div>
+                </div>
+                <div className="gifts-strip">
+                  <strong>Free gifts included with every package:</strong>{" "}
+                  3D design · 8ft table top · smart lock · safe back door · installation wiring
+                  · downlight fittings · fan fittings · site visit · quotation · sink · hood &amp; stove installation
                 </div>
               </div>
             </Reveal>
@@ -251,49 +246,86 @@ export default function ServicesEn() {
               </div>
               <div className="svc__body" id="interior" style={{ marginTop: 24 }}>
                 <span className="eyebrow">03 · Interior Design</span>
-                <h2>Design-only, if that&apos;s all you need.</h2>
-                <div className="svc__price"><small>From</small>RM19,999</div>
+                <h2>Carpentry &amp; finishes built into your home.</h2>
+                <div className="svc__price"><small>From</small>RM39,000</div>
                 <p className="lead">
-                  For homeowners who want a polished design package they can hand to their own
-                  contractor — or just to visualise before committing.
+                  Full interior build-out packages covering kitchen, wardrobes, TV cabinet,
+                  ceiling and flooring. Three material series — choose the one that fits your
+                  budget and finish.
                 </p>
                 <ul className="svc__list">
-                  <li>Layout planning &amp; space optimisation</li>
-                  <li>Moodboard &amp; concept direction</li>
+                  <li>Plaster ceiling &amp; SPC flooring</li>
+                  <li>Custom kitchen, wardrobes, TV cabinet, tall units</li>
+                  <li>Three material series: melamine, laminated, shaker</li>
                 </ul>
-                <div className="tier-grid tier-grid--2">
+                <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head">
-                      <span className="tier__name">7-in-1</span>
-                      <p className="tier__tag">Design starter.</p>
+                      <span className="tier__name">ID START</span>
+                      <p className="tier__tag">Melamine series.</p>
                     </div>
-                    <div className="tier__spec">Key rooms covered</div>
-                    <div className="tier__price"><small>FROM</small><strong>RM49,999</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
+                    <div className="tier__spec">~650 sqft · Essentials</div>
+                    <div className="tier__price"><small>FROM</small><strong>RM39k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the ID START package (Interior Design · melamine series, from RM39k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
                     <ul className="tier__feats">
-                      <li>3D visualisation</li>
-                      <li>Technical drawings</li>
-                      <li>Material &amp; colour selection</li>
+                      <li>Plaster ceiling &amp; SPC flooring (~650 sqft)</li>
+                      <li>Kitchen base + wall units · backsplash</li>
+                      <li>TV cabinet · shoe cabinet · 2 wardrobes</li>
                     </ul>
-                    <p className="tier__note">New homeowners</p>
+                    <p className="tier__note">First-time homeowners</p>
                   </div>
                   <div className="tier tier--featured">
-                    <div className="tier__badge">Best Value</div>
+                    <div className="tier__badge">Most Popular</div>
                     <div className="tier__head">
-                      <span className="tier__name">9-in-1</span>
-                      <p className="tier__tag">Full interior solution.</p>
+                      <span className="tier__name">ID PLUS</span>
+                      <p className="tier__tag">Laminated series.</p>
                     </div>
-                    <div className="tier__spec">Complete home coverage</div>
-                    <div className="tier__price"><small>FROM</small><strong>RM59,999</strong></div>
-                    <a href="https://wa.me/60193428981" className="tier__cta">Enquire →</a>
+                    <div className="tier__spec">~1,000 sqft · Family-ready</div>
+                    <div className="tier__price"><small>FROM</small><strong>RM59k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the ID PLUS package (Interior Design · laminated series, from RM59k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
                     <ul className="tier__feats">
-                      <li>Everything in 7-in-1</li>
-                      <li>Full documentation set</li>
-                      <li>Site coordination support</li>
-                      <li>9 design categories covered</li>
+                      <li>Plaster ceiling &amp; SPC flooring (~1,000 sqft)</li>
+                      <li>Island table + study table + 3 wardrobes</li>
+                      <li>Tall units (fridge + oven) included</li>
                     </ul>
-                    <p className="tier__note">Includes contractor handover pack</p>
+                    <p className="tier__note">Most chosen by families</p>
                   </div>
+                  <div className="tier">
+                    <div className="tier__head">
+                      <span className="tier__name">ID MAX</span>
+                      <p className="tier__tag">Shaker design series.</p>
+                    </div>
+                    <div className="tier__spec">~1,300 sqft · Premium finish</div>
+                    <div className="tier__price"><small>FROM</small><strong>RM79k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the ID MAX package (Interior Design · shaker design series, from RM79k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
+                    <ul className="tier__feats">
+                      <li>SPC flooring up to ~1,300 sqft</li>
+                      <li>Large 8ft × 4ft island table</li>
+                      <li>3 wardrobes incl. 10ft master</li>
+                    </ul>
+                    <p className="tier__note">Full premium build-out</p>
+                  </div>
+                </div>
+                <div className="gifts-strip">
+                  <strong>Free gifts included with every ID package:</strong>{" "}
+                  3D design · dishrack · bottle rack · drawer set · soft-close mechanism
+                  · undersink protection · stove &amp; hood installation · cabinet handles (on request)
+                  · simple wiring &amp; plumbing
                 </div>
               </div>
             </Reveal>
@@ -349,8 +381,11 @@ export default function ServicesEn() {
                 </p>
               </div>
               <div className="cta-strip__actions">
-                <a href="https://wa.me/60193428981" className="btn btn--primary">
-                  WhatsApp Najiha
+                <a
+                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like a free feasibility note — I'm exploring your packages and would like to discuss my project.")}`}
+                  className="btn btn--primary"
+                >
+                  Message us
                 </a>
                 <a href="mailto:bina.designbuild@gmail.com" className="btn btn--ghost">
                   Email us
