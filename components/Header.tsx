@@ -15,13 +15,20 @@ type Props = {
   current?: "home" | "about" | "services" | "caseStudies" | "blog" | "contact";
 };
 
+// Quote-intent WhatsApp pre-fill (locale-aware).
+const WA_PHONE = "60193428981";
+const QUOTE_TEXT = {
+  en: "Hi BINA+! I'd like a quote — I have a project in mind and want to discuss scope and pricing.",
+  ms: "Hai BINA+! Saya nak quote — ada projek dalam fikiran dan nak bincang skop dan harga.",
+} as const;
+
 export default function Header({ locale, altHref, selfHref, current }: Props) {
   const [scrolled, setScrolled] = useState(false);
   const [drawerOpen, setDrawerOpen] = useState(false);
   const d = dict[locale];
   const r = routes[locale];
   const home = r.home;
-  const contactHash = `${home === "/" ? "" : home}#contact`;
+  const quoteHref = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(QUOTE_TEXT[locale])}`;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -74,7 +81,12 @@ export default function Header({ locale, altHref, selfHref, current }: Props) {
           </nav>
           <div className="nav__right">
             <LangSwitcher locale={locale} altHref={altHref} selfHref={selfHref} variant="short" />
-            <a href={contactHash} className="btn btn--primary nav__quote">
+            <a
+              href={quoteHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn--primary nav__quote"
+            >
               {d.nav.getQuote}
             </a>
             <button

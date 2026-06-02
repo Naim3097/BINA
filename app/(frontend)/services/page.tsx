@@ -115,7 +115,7 @@ export default function ServicesEn() {
                   <li>Construction &amp; certified site supervision</li>
                   <li>Material &amp; detail coordination end-to-end</li>
                 </ul>
-                <div className="tier-grid tier-grid--2">
+                <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head">
                       <span className="tier__name">BINA START</span>
@@ -138,6 +138,26 @@ export default function ServicesEn() {
                   </div>
                   <div className="tier tier--featured">
                     <div className="tier__badge">Most Popular</div>
+                    <div className="tier__head">
+                      <span className="tier__name">BINA PLUS</span>
+                      <p className="tier__tag">1.5-storey, room to grow.</p>
+                    </div>
+                    <div className="tier__spec">1,500 sqft · 3 bed · 2 bath · 1.5-storey</div>
+                    <div className="tier__price"><small>FROM</small><strong>RM350k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the BINA PLUS package (Design & Build · 1.5-storey, 1,500 sqft, 3 bed / 2 bath, from RM350k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
+                    <ul className="tier__feats">
+                      <li>1.5-storey home, ~1,500 sqft</li>
+                      <li>3 bedrooms · 2 bathrooms</li>
+                      <li>Mid-tier finishes, upgradable specs</li>
+                    </ul>
+                    <p className="tier__note">Best value for growing families</p>
+                  </div>
+                  <div className="tier">
                     <div className="tier__head">
                       <span className="tier__name">BINA MAX</span>
                       <p className="tier__tag">Double-storey, fully maximised.</p>
@@ -181,10 +201,11 @@ export default function ServicesEn() {
                 <h2>Extend the home you already own.</h2>
                 <div className="svc__price"><small>From</small>RM100,000</div>
                 <p className="lead">
-                  Add livable square footage to your existing home — a single-storey back
-                  extension or a full two-storey build-up. Two tiers, defined scope, fixed price.
+                  Add livable square footage to your existing home — back extension, full
+                  two-storey build-up, or corner-lot expansion. Three tiers, defined scope,
+                  fixed price.
                 </p>
-                <div className="tier-grid tier-grid--2">
+                <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head">
                       <span className="tier__name">RENO START</span>
@@ -225,6 +246,26 @@ export default function ServicesEn() {
                       <li>Finishes &amp; permits</li>
                     </ul>
                     <p className="tier__note">Maximise your floor area</p>
+                  </div>
+                  <div className="tier">
+                    <div className="tier__head">
+                      <span className="tier__name">RENO MAX</span>
+                      <p className="tier__tag">2-storey corner-lot extension.</p>
+                    </div>
+                    <div className="tier__spec">2-storey corner-lot expansion</div>
+                    <div className="tier__price"><small>FROM</small><strong>RM300k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the RENO MAX package (2-storey corner-lot extension, from RM300k).")}`}
+                      className="tier__cta"
+                    >
+                      Enquire →
+                    </a>
+                    <ul className="tier__feats">
+                      <li>Corner-lot expansion, both floors</li>
+                      <li>Wider envelope, engineered structure</li>
+                      <li>Council submissions handled</li>
+                    </ul>
+                    <p className="tier__note">For corner lots with wider build potential</p>
                   </div>
                 </div>
                 <div className="gifts-strip">

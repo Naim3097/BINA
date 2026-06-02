@@ -93,7 +93,7 @@ export default function ServicesMs() {
                   <li>Penyelarasan bahan &amp; perincian hujung-ke-hujung</li>
                 </ul>
 
-                <div className="tier-grid tier-grid--2">
+                <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head"><span className="tier__name">BINA START</span><p className="tier__tag">Rumah keluarga setingkat.</p></div>
                     <div className="tier__spec">1,200 kps · 3 bilik · 2 bilik air · Setingkat</div>
@@ -113,6 +113,23 @@ export default function ServicesMs() {
                   </div>
                   <div className="tier tier--featured">
                     <div className="tier__badge">Paling Popular</div>
+                    <div className="tier__head"><span className="tier__name">BINA PLUS</span><p className="tier__tag">1.5 tingkat, ruang untuk berkembang.</p></div>
+                    <div className="tier__spec">1,500 kps · 3 bilik · 2 bilik air · 1.5 tingkat</div>
+                    <div className="tier__price"><small>BERMULA</small><strong>RM350k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej BINA PLUS (Reka & Bina · 1.5 tingkat, 1,500 kps, 3 bilik / 2 bilik air, mula RM350k).")}`}
+                      className="tier__cta"
+                    >
+                      Tanya →
+                    </a>
+                    <ul className="tier__feats">
+                      <li>Rumah 1.5 tingkat, ~1,500 kps</li>
+                      <li>3 bilik tidur · 2 bilik air</li>
+                      <li>Kemasan pertengahan, spec boleh dinaik taraf</li>
+                    </ul>
+                    <p className="tier__note">Nilai terbaik untuk keluarga berkembang</p>
+                  </div>
+                  <div className="tier">
                     <div className="tier__head"><span className="tier__name">BINA MAX</span><p className="tier__tag">Dua tingkat, dimaksimumkan.</p></div>
                     <div className="tier__spec">2,000 kps · 4 bilik · 3 bilik air · Dua tingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM460k</strong></div>
@@ -153,9 +170,9 @@ export default function ServicesMs() {
                 <span className="eyebrow">02 · Renovasi</span>
                 <h2>Tambah ruang pada rumah anda.</h2>
                 <div className="svc__price"><small>Bermula</small>RM100,000</div>
-                <p className="lead">Tambah keluasan rumah sedia ada — sambungan setingkat di belakang atau bina-naik dua tingkat penuh. Dua peringkat, skop ditakrif, harga tetap.</p>
+                <p className="lead">Tambah keluasan rumah sedia ada — sambungan belakang, bina-naik dua tingkat penuh, atau sambungan lot bucu. Tiga peringkat, skop ditakrif, harga tetap.</p>
 
-                <div className="tier-grid tier-grid--2">
+                <div className="tier-grid">
                   <div className="tier">
                     <div className="tier__head"><span className="tier__name">RENO START</span><p className="tier__tag">Sambungan belakang.</p></div>
                     <div className="tier__spec">Sambungan setingkat di belakang</div>
@@ -190,6 +207,23 @@ export default function ServicesMs() {
                       <li>Kemasan &amp; permit</li>
                     </ul>
                     <p className="tier__note">Maksimumkan keluasan</p>
+                  </div>
+                  <div className="tier">
+                    <div className="tier__head"><span className="tier__name">RENO MAX</span><p className="tier__tag">Sambungan lot bucu 2 tingkat.</p></div>
+                    <div className="tier__spec">Sambungan dua tingkat untuk lot bucu</div>
+                    <div className="tier__price"><small>BERMULA</small><strong>RM300k</strong></div>
+                    <a
+                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej RENO MAX (sambungan lot bucu dua tingkat, mula RM300k).")}`}
+                      className="tier__cta"
+                    >
+                      Tanya →
+                    </a>
+                    <ul className="tier__feats">
+                      <li>Sambungan lot bucu, dua tingkat</li>
+                      <li>Envelope lebih luas, struktur direka jurutera</li>
+                      <li>Penyerahan majlis diuruskan</li>
+                    </ul>
+                    <p className="tier__note">Untuk lot bucu yang ada ruang luas</p>
                   </div>
                 </div>
                 <div className="gifts-strip">
