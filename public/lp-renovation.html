@@ -282,7 +282,11 @@
   .lp-faq p{margin-top:14px;color:var(--ink-2);font-size:0.9375rem;line-height:1.65}
 
   /* Final CTA */
-  .lp-final{background:var(--lp-dark);color:#fff;text-align:center;padding:104px 0}
+  .lp-final{position:relative;color:#fff;text-align:center;padding:104px 0;background:var(--lp-dark);overflow:hidden}
+  .lp-final__bg{position:absolute;inset:0;z-index:0}
+  .lp-final__bg img{width:100%;height:100%;object-fit:cover;display:block}
+  .lp-final__overlay{position:absolute;inset:0;z-index:1;background:rgba(0,0,0,.72)}
+  .lp-final .container{position:relative;z-index:2}
   @media(max-width:768px){.lp-final{padding:64px 0}}
   .lp-final h2{color:#fff;font-size:clamp(1.75rem,3.4vw,2.5rem);max-width:600px;margin:0 auto 16px;line-height:1.15;letter-spacing:-0.025em}
   .lp-final p{color:rgba(255,255,255,.7);max-width:520px;margin:0 auto 32px;font-size:1rem;line-height:1.55}
@@ -329,7 +333,7 @@
 <section class="lp-hero">
   <!-- Background image -->
   <div class="lp-hero__bg" aria-hidden="true">
-    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1400&q=80&auto=format&fit=crop" alt="" loading="eager" fetchpriority="high" />
+    <img src="/assets/assets/sekinchan 1.png" alt="" loading="eager" fetchpriority="high" />
   </div>
   <div class="lp-hero__overlay" aria-hidden="true"></div>
 
@@ -772,6 +776,10 @@
 
 <!-- ============== FINAL CTA ============== -->
 <section class="lp-final">
+  <div class="lp-final__bg" aria-hidden="true">
+    <img src="/assets/assets/ervina 1.png" alt="" loading="lazy" />
+  </div>
+  <div class="lp-final__overlay" aria-hidden="true"></div>
   <div class="container">
     <h2>Want a quote? WhatsApp Najiha.</h2>
     <p>Floor plan optional. Reply within 30 minutes during business hours.</p>
