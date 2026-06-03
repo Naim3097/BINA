@@ -67,7 +67,7 @@ export default function ServicesMs() {
           <Reveal delay={1} className="page-hero__media">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1100&q=80&auto=format&fit=crop"
+              src="/assets/assets/sekinchan%201.png"
               alt="Reka bentuk dalaman moden"
               loading="eager"
             />
@@ -239,7 +239,7 @@ export default function ServicesMs() {
               <div className="svc__media">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80&auto=format&fit=crop"
+                  src="/assets/assets/ervina 16.png"
                   alt="Reka bentuk dalaman"
                   loading="lazy"
                 />
