@@ -479,6 +479,14 @@ em.accent, h1 em, h2 em {
   min-height: 520px;
   box-shadow: var(--shadow-lg);
 }
+.hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to top, rgba(0,0,0,.72) 0%, rgba(0,0,0,.28) 40%, transparent 70%);
+  pointer-events: none;
+}
 .hero__media img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
 .hero__chip {
   position: absolute;
@@ -495,21 +503,17 @@ em.accent, h1 em, h2 em {
   color: var(--ink);
   font-weight: 500;
   box-shadow: var(--shadow-md);
+  z-index: 1;
 }
 .hero__chip::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--brand); }
 .hero__badge {
   position: absolute;
   left: 20px;
   bottom: 20px;
-  background: rgba(255, 255, 255, .38);
   color: #fff;
   padding: 14px 18px;
-  border-radius: var(--r-md);
-  border: 1px solid rgba(255, 255, 255, .45);
-  box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, .05) 0px 1px 2px 0px;
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
   max-width: 260px;
+  z-index: 1;
 }
 .hero__badge strong { display: block; font-weight: 600; font-size: 1rem; margin-bottom: 2px; letter-spacing: -.01em; color: #fff; }
 .hero__badge span { font-size: .8125rem; color: rgba(255, 255, 255, .82); line-height: 1.45; }
@@ -855,7 +859,7 @@ em.accent, h1 em, h2 em {
 .method--dark p, .method--brand p { color: rgba(246, 239, 234, .65); }
 .method--light p { color: var(--ink-2); }
 @media (max-width: 980px) { .method-grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 520px) { .method-grid { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .method-grid { grid-template-columns: 1fr; } .method { align-items: center; text-align: center; } }
 
 /* ---------- Steps ---------- */
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; position: relative; }
@@ -885,7 +889,7 @@ em.accent, h1 em, h2 em {
 .section--surface .step__num { background: var(--surface); }
 .step h3 { font-size: 1.25rem; font-weight: 600; margin-top: 6px; }
 .step p { font-size: .9375rem; color: var(--muted); line-height: 1.6; }
-@media (max-width: 880px) { .steps { grid-template-columns: 1fr; gap: 32px; } .steps::before { display: none; } }
+@media (max-width: 880px) { .steps { grid-template-columns: 1fr; gap: 32px; } .steps::before { display: none; } .step { align-items: center; text-align: center; } .step__num { align-self: center; padding-right: 0; } }
 
 /* ---------- CTA Strip ---------- */
 .cta-strip {

@@ -52,7 +52,7 @@ export default async function CaseStudiesEn() {
           <div className="cs-hero__media">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=2000&q=80&auto=format&fit=crop"
+              src="/assets/assets/ervina 7.png"
               alt="Featured BINA+ project"
               loading="eager"
             />

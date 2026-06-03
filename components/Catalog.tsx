@@ -46,15 +46,15 @@ type Props = {
 const EN_DEFAULTS = {
   ariaLabel: "Recent work",
   intro: {
-    years: "2025 — Now",
+    years: "2026 — Now",
     eyebrow: "Recent work",
-    titleLine1: "Our 2025",
+    titleLine1: "Our 2026",
     titleLine2: "catalogue.",
     sub: "Design-and-build projects delivered across the Klang Valley — scroll to explore.",
   },
   mhead: {
-    eyebrow: "2025 — Now",
-    titleLine1: "Our 2025",
+    eyebrow: "2026 — Now",
+    titleLine1: "Our 2026",
     titleLine2: "catalogue.",
     sub: "Design-and-build projects across the Klang Valley. Swipe to explore.",
   },

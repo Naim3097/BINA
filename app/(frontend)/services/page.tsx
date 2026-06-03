@@ -280,7 +280,7 @@ export default function ServicesEn() {
               <div className="svc__media">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=900&q=80&auto=format&fit=crop"
+                  src="/assets/assets/ervina 16.png"
                   alt="Interior design"
                   loading="lazy"
                 />
