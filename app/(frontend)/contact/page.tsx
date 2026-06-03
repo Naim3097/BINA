@@ -8,7 +8,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact BINA+ — Talk to Us, Email, or Visit the Studio",
   description:
-    "Get in touch with BINA+ Design & Build. Message Najiha (renovation, extension, interior) or Syafiq (design & build), email, or visit our Shah Alam studio.",
+    "Get in touch with BINA+ Design & Build. Message Najiha on WhatsApp for renovation, extension, interior and new design & build projects, email, or visit our Shah Alam studio.",
   alternates: {
     canonical: "/contact",
     languages: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 const NAJIHA_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
   "Hi BINA+! I'd like to chat about a renovation, extension or interior project."
 )}`;
-const SYAFIQ_WA = `https://wa.me/60134315051?text=${encodeURIComponent(
+const SYAFIQ_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
   "Hi BINA+! I'd like to chat about a new design & build project."
 )}`;
 const MAPS_URL =
@@ -102,10 +102,10 @@ export default function ContactEn() {
                   </svg>
                 </div>
                 <span className="eyebrow">Design &amp; build (new home)</span>
-                <h3>Chat with Syafiq</h3>
+                <h3>Chat with Najiha</h3>
                 <p>
-                  For new builds and full design-and-build projects. Same response time, routed
-                  straight to the build team.
+                  For new builds and full design-and-build projects. Same fast response — Najiha
+                  will route you to the build team.
                 </p>
                 <a
                   href={SYAFIQ_WA}
@@ -115,7 +115,7 @@ export default function ContactEn() {
                 >
                   Start a chat →
                 </a>
-                <span className="contact-method__sub">+60 13-431 5051</span>
+                <span className="contact-method__sub">+60 19-342 8981</span>
               </Reveal>
 
               <Reveal as="article" delay={2} className="contact-method">
@@ -175,8 +175,8 @@ export default function ContactEn() {
                 <h2>Send your details, we&apos;ll reply fast.</h2>
                 <p>
                   Fill it out and one of our directors will reach out within 30 minutes during
-                  business hours. Najiha handles renovation, extension and interior. Syafiq
-                  handles new builds.
+                  business hours. Najiha handles all enquiries — renovation, extension, interior
+                  and new builds.
                 </p>
                 <ul className="contact-form-perks">
                   <li>Free 60-minute consultation on site or at the studio</li>

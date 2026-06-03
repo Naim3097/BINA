@@ -66,11 +66,11 @@ export const dict = {
       copyright: "BINA+ Reka & Bina · bina.byboxup. Hak cipta terpelihara.",
       privacy: "Privasi",
       terms: "Terma",
-      contactPrincipal: "Syafiq · +60 19-342 8981",
+      contactPrincipal: "Najiha · +60 19-342 8981",
       contactSecondary: "Syafiq · +60 13-431 5051",
     },
     drawerFoot: {
-      principal: "+60 19-342 8981 (Syafiq)",
+      principal: "+60 19-342 8981 (Najiha)",
       secondary: "+60 13-431 5051 (Syafiq)",
     },
     lang: {

@@ -159,7 +159,6 @@ export default function Header({ locale, altHref, selfHref, current }: Props) {
         </div>
         <div className="drawer__foot">
           <a href="tel:+60193428981">{d.drawerFoot.principal}</a>
-          <a href="tel:+60134315051">{d.drawerFoot.secondary}</a>
           <a href="mailto:bina.designbuild@gmail.com">bina.designbuild@gmail.com</a>
         </div>
       </aside>

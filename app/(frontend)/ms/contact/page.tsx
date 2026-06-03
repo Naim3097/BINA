@@ -9,7 +9,7 @@ import LangSetter from "@/components/LangSetter";
 export const metadata: Metadata = {
   title: "Hubungi BINA+ — Sembang, E-mel, atau Lawat Studio",
   description:
-    "Hubungi BINA+ Reka & Bina. Hantar mesej kepada Najiha (renovasi, sambungan, dalaman) atau Syafiq (reka & bina), e-mel, atau lawat studio kami di Shah Alam.",
+    "Hubungi BINA+ Reka & Bina. Hantar mesej kepada Najiha melalui WhatsApp untuk renovasi, sambungan, dalaman dan reka & bina baru, e-mel, atau lawat studio kami di Shah Alam.",
   alternates: {
     canonical: "/ms/contact",
     languages: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const NAJIHA_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
   "Hai BINA+! Saya nak borak pasal projek renovasi, sambungan atau dalaman."
 )}`;
-const SYAFIQ_WA = `https://wa.me/60134315051?text=${encodeURIComponent(
+const SYAFIQ_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
   "Hai BINA+! Saya nak borak pasal projek reka & bina rumah baru."
 )}`;
 const MAPS_URL =
@@ -106,10 +106,10 @@ export default function ContactMs() {
                   </svg>
                 </div>
                 <span className="eyebrow">Reka &amp; bina (rumah baru)</span>
-                <h3>Sembang dengan Syafiq</h3>
+                <h3>Sembang dengan Najiha</h3>
                 <p>
-                  Untuk binaan baru dan projek reka-dan-bina penuh. Masa balas sama, terus dihantar
-                  kepada pasukan binaan.
+                  Untuk binaan baru dan projek reka-dan-bina penuh. Masa balas yang sama — Najiha
+                  akan hubungkan anda dengan pasukan binaan.
                 </p>
                 <a
                   href={SYAFIQ_WA}
@@ -119,7 +119,7 @@ export default function ContactMs() {
                 >
                   Mulakan sembang →
                 </a>
-                <span className="contact-method__sub">+60 13-431 5051</span>
+                <span className="contact-method__sub">+60 19-342 8981</span>
               </Reveal>
 
               <Reveal as="article" delay={2} className="contact-method">
@@ -179,8 +179,8 @@ export default function ContactMs() {
                 <h2>Hantar butiran, kami balas dengan cepat.</h2>
                 <p>
                   Isi borang ini dan salah seorang pengarah kami akan hubungi anda dalam 30 minit
-                  waktu kerja. Najiha uruskan renovasi, sambungan dan dalaman. Syafiq uruskan
-                  binaan baru.
+                  waktu kerja. Najiha uruskan semua pertanyaan — renovasi, sambungan, dalaman
+                  dan binaan baru.
                 </p>
                 <ul className="contact-form-perks">
                   <li>Konsultasi 60 minit percuma di tapak atau studio</li>

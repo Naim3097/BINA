@@ -4,7 +4,6 @@ import { useState, type FormEvent } from "react";
 import type { Locale } from "@/lib/dict";
 
 const WA_NAJIHA = "60193428981";
-const WA_SYAFIQ = "60134315051";
 
 const COPY = {
   en: {
@@ -102,10 +101,8 @@ export default function ContactForm({ locale }: { locale: Locale }) {
     }
     const text = lines.join("\n");
 
-    // Route new-build leads to Syafiq, everything else to Najiha
-    const isNewBuild = /design.*build|reka.*bina/i.test(interest);
-    const phoneNo = isNewBuild ? WA_SYAFIQ : WA_NAJIHA;
-    const url = `https://wa.me/${phoneNo}?text=${encodeURIComponent(text)}`;
+    // Route all leads to Najiha
+    const url = `https://wa.me/${WA_NAJIHA}?text=${encodeURIComponent(text)}`;
 
     setState("ok");
     setWaUrl(url);
