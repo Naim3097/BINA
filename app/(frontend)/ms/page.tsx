@@ -28,7 +28,13 @@ export const metadata: Metadata = {
     description: "Reka, bina dan renovasi hujung-ke-hujung di Shah Alam, Selangor. Bermula RM200k.",
     url: "/ms",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+      {
+        url: "/og-bina.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BINA+ Reka & Bina — Sawah & Teduh, rumah siap di Sekinchan, Selangor",
+        type: "image/jpeg",
+      },
     ],
   },
 };

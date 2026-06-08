@@ -21,7 +21,7 @@ const jakarta = localFont({
   display: "swap",
 });
 
-const siteUrl = "https://bina.designbuild";
+const siteUrl = "https://binaplusdesign.my";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,7 +36,13 @@ export const metadata: Metadata = {
     description: "End-to-end design, build and renovation in Shah Alam, Selangor. From RM200k.",
     url: "/",
     images: [
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80&auto=format&fit=crop",
+      {
+        url: "/og-bina.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BINA+ Design & Build — Sawah & Teduh, a completed home in Sekinchan, Selangor",
+        type: "image/jpeg",
+      },
     ],
   },
   twitter: { card: "summary_large_image" },
