@@ -25,10 +25,7 @@ export const metadata: Metadata = {
 };
 
 const NAJIHA_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
-  "Hi BINA+! I'd like to chat about a renovation, extension or interior project."
-)}`;
-const SYAFIQ_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
-  "Hi BINA+! I'd like to chat about a new design & build project."
+  "Hi BINA+! I have a quick question."
 )}`;
 const MAPS_URL =
   "https://maps.google.com/?q=24-1+Jalan+Matahari+Aa+U5+Pinggiran+Subang+40150+Shah+Alam";
@@ -78,11 +75,11 @@ export default function ContactEn() {
                     <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.5L9.4 7c-.2-.5-.4-.4-.6-.4H8.3c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
                   </svg>
                 </div>
-                <span className="eyebrow">Renovation, extension, interior</span>
-                <h3>Chat with Najiha</h3>
+                <span className="eyebrow">Prefer WhatsApp?</span>
+                <h3>Quick questions</h3>
                 <p>
-                  Send a quick message and she&apos;ll reply within 30 minutes during business
-                  hours. A photo or sketch of your floor plan is enough to get going.
+                  For a fast one-off question, message Najiha directly. For a project enquiry,
+                  the form below gets you a proper itemised reply within one working day.
                 </p>
                 <a
                   href={NAJIHA_WA}
@@ -96,29 +93,6 @@ export default function ContactEn() {
               </Reveal>
 
               <Reveal as="article" delay={1} className="contact-method">
-                <div className="contact-method__icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.5L9.4 7c-.2-.5-.4-.4-.6-.4H8.3c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
-                  </svg>
-                </div>
-                <span className="eyebrow">Design &amp; build (new home)</span>
-                <h3>Chat with Najiha</h3>
-                <p>
-                  For new builds and full design-and-build projects. Same fast response — Najiha
-                  will route you to the build team.
-                </p>
-                <a
-                  href={SYAFIQ_WA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-method__cta"
-                >
-                  Start a chat →
-                </a>
-                <span className="contact-method__sub">+60 19-342 8981</span>
-              </Reveal>
-
-              <Reveal as="article" delay={2} className="contact-method">
                 <div className="contact-method__icon" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -213,13 +187,8 @@ export default function ContactEn() {
                 >
                   Get directions
                 </a>
-                <a
-                  href={NAJIHA_WA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--ghost"
-                >
-                  Message us
+                <a href="#form" className="btn btn--ghost">
+                  Use the form
                 </a>
               </div>
             </Reveal>

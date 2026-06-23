@@ -28,10 +28,7 @@ export const metadata: Metadata = {
 };
 
 const NAJIHA_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
-  "Hai BINA+! Saya nak borak pasal projek renovasi, sambungan atau dalaman."
-)}`;
-const SYAFIQ_WA = `https://wa.me/60193428981?text=${encodeURIComponent(
-  "Hai BINA+! Saya nak borak pasal projek reka & bina rumah baru."
+  "Hai BINA+! Saya ada soalan ringkas."
 )}`;
 const MAPS_URL =
   "https://maps.google.com/?q=24-1+Jalan+Matahari+Aa+U5+Pinggiran+Subang+40150+Shah+Alam";
@@ -82,11 +79,11 @@ export default function ContactMs() {
                     <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.5L9.4 7c-.2-.5-.4-.4-.6-.4H8.3c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
                   </svg>
                 </div>
-                <span className="eyebrow">Renovasi, sambungan, dalaman</span>
-                <h3>Sembang dengan Najiha</h3>
+                <span className="eyebrow">Lebih suka WhatsApp?</span>
+                <h3>Soalan ringkas</h3>
                 <p>
-                  Hantar mesej ringkas dan dia balas dalam 30 minit waktu kerja. Foto atau
-                  lakaran pelan lantai dah cukup untuk mula.
+                  Untuk soalan ringkas, WhatsApp Najiha terus. Untuk pertanyaan projek, borang
+                  di bawah beri anda balasan terperinci dalam satu hari bekerja.
                 </p>
                 <a
                   href={NAJIHA_WA}
@@ -100,29 +97,6 @@ export default function ContactMs() {
               </Reveal>
 
               <Reveal as="article" delay={1} className="contact-method">
-                <div className="contact-method__icon" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.5L9.4 7c-.2-.5-.4-.4-.6-.4H8.3c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
-                  </svg>
-                </div>
-                <span className="eyebrow">Reka &amp; bina (rumah baru)</span>
-                <h3>Sembang dengan Najiha</h3>
-                <p>
-                  Untuk binaan baru dan projek reka-dan-bina penuh. Masa balas yang sama — Najiha
-                  akan hubungkan anda dengan pasukan binaan.
-                </p>
-                <a
-                  href={SYAFIQ_WA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="contact-method__cta"
-                >
-                  Mulakan sembang →
-                </a>
-                <span className="contact-method__sub">+60 19-342 8981</span>
-              </Reveal>
-
-              <Reveal as="article" delay={2} className="contact-method">
                 <div className="contact-method__icon" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <rect x="2" y="4" width="20" height="16" rx="2" />
@@ -217,13 +191,8 @@ export default function ContactMs() {
                 >
                   Dapatkan arah
                 </a>
-                <a
-                  href={NAJIHA_WA}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn--ghost"
-                >
-                  Hantar mesej
+                <a href="#form" className="btn btn--ghost">
+                  Guna borang
                 </a>
               </div>
             </Reveal>

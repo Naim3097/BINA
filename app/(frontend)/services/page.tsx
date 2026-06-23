@@ -124,7 +124,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">1,200 sqft · 3 bed · 2 bath · Single-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the BINA START package (Design & Build · 1-storey, 1,200 sqft, 3 bed / 2 bath, from RM200k).")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA START")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -145,7 +145,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">1,500 sqft · 3 bed · 2 bath · 1.5-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM350k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the BINA PLUS package (Design & Build · 1.5-storey, 1,500 sqft, 3 bed / 2 bath, from RM350k).")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA PLUS")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -165,7 +165,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">2,000 sqft · 4 bed · 3 bath · Double-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM460k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the BINA MAX package (Design & Build · 2-storey, 2,000 sqft, 4 bed / 3 bath, from RM460k).")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA MAX")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -214,7 +214,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">Single-storey rear extension</div>
                     <div className="tier__price"><small>FROM</small><strong>RM100k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the RENO START package (single-storey back extension, from RM100k).")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO START")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -235,7 +235,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">Full two-storey extension</div>
                     <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the RENO PLUS package (full 2-storey extension, from RM200k).")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO PLUS")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -255,7 +255,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">2-storey corner-lot expansion</div>
                     <div className="tier__price"><small>FROM</small><strong>RM300k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the RENO MAX package (2-storey corner-lot extension, from RM300k).")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO MAX")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -308,7 +308,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">~650 sqft · Essentials</div>
                     <div className="tier__price"><small>FROM</small><strong>RM39k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the ID START package (Interior Design · melamine series, from RM39k).")}`}
+                      href={`/contact?package=${encodeURIComponent("ID START")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -329,7 +329,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">~1,000 sqft · Family-ready</div>
                     <div className="tier__price"><small>FROM</small><strong>RM59k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the ID PLUS package (Interior Design · laminated series, from RM59k).")}`}
+                      href={`/contact?package=${encodeURIComponent("ID PLUS")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -349,7 +349,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">~1,300 sqft · Premium finish</div>
                     <div className="tier__price"><small>FROM</small><strong>RM79k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like more info on the ID MAX package (Interior Design · shaker design series, from RM79k).")}`}
+                      href={`/contact?package=${encodeURIComponent("ID MAX")}`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -423,7 +423,7 @@ export default function ServicesEn() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like a free feasibility note — I'm exploring your packages and would like to discuss my project.")}`}
+                  href="/contact"
                   className="btn btn--primary"
                 >
                   Message us

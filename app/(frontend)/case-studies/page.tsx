@@ -77,7 +77,7 @@ export default async function CaseStudiesEn() {
               <div className="cs-hero__cta">
                 <a href="#projects" className="btn btn--primary">Browse projects</a>
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like to start a project — please send me a feasibility note.")}`}
+                  href="/contact"
                   className="btn btn--ghost btn--ghost-light"
                 >
                   Start a project
@@ -157,7 +157,7 @@ export default async function CaseStudiesEn() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! One of your case studies resonates with me — can you send a similar-scope feasibility note?")}`}
+                  href="/contact"
                   className="btn btn--primary"
                 >
                   Start a project

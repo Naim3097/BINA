@@ -282,7 +282,7 @@ export default function HomeMs() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin dapatkan nota kebolehlaksanaan — saya ada plot/ringkasan untuk dibincangkan.")}`}
+                  href="/ms/contact"
                   className="btn btn--primary"
                 >
                   Hantar mesej

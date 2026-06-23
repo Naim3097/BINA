@@ -978,33 +978,37 @@ em.accent, h1 em, h2 em {
   z-index: 70;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 58px;
-  height: 58px;
-  border-radius: 50%;
-  background: #25D366;
+  gap: 9px;
+  height: 52px;
+  padding: 0 20px;
+  border-radius: 999px;
+  background: var(--brand, #a33d26);
   color: #fff;
-  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.35), 0 4px 12px rgba(0, 0, 0, 0.12);
+  font-weight: 600;
+  font-size: 15px;
+  box-shadow: 0 8px 24px rgba(163, 61, 38, 0.35), 0 4px 12px rgba(0, 0, 0, 0.12);
   text-decoration: none;
-  transition: transform 0.2s var(--tx), box-shadow 0.2s var(--tx);
+  transition: transform 0.2s var(--tx), box-shadow 0.2s var(--tx), background 0.2s var(--tx);
 }
 .wa-fab:hover,
 .wa-fab:focus-visible {
-  transform: scale(1.06);
-  box-shadow: 0 12px 32px rgba(37, 211, 102, 0.45), 0 4px 14px rgba(0, 0, 0, 0.14);
-  background: #1ebe5a;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(163, 61, 38, 0.45), 0 4px 14px rgba(0, 0, 0, 0.14);
+  background: #8a2f1b;
 }
 .wa-fab:focus-visible {
-  outline: 3px solid rgba(37, 211, 102, 0.4);
+  outline: 3px solid rgba(163, 61, 38, 0.4);
   outline-offset: 3px;
 }
 .wa-fab svg { flex: none; }
+.wa-fab__label { white-space: nowrap; }
 @media (max-width: 560px) {
   .wa-fab {
-    right: 18px;
-    bottom: calc(18px + env(safe-area-inset-bottom));
-    width: 54px;
-    height: 54px;
+    right: 16px;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    height: 48px;
+    padding: 0 16px;
+    font-size: 14px;
   }
 }
 @media (prefers-reduced-motion: reduce) {

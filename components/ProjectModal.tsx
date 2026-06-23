@@ -206,11 +206,7 @@ export default function ProjectModal({ project, onClose, locale = "en" }: Props)
                   </div>
                   <div className="pm-cta__actions">
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent(
-                        locale === "ms"
-                          ? `Hai BINA+! Saya inginkan projek seumpama "${project.title}" — boleh kongsi nota kebolehlaksanaan?`
-                          : `Hi BINA+! I'd love a similar-scope project to "${project.title}" — can you send a feasibility note?`
-                      )}`}
+                      href={`${locale === "ms" ? "/ms/contact" : "/contact"}?project=${encodeURIComponent(project.title)}`}
                       className="btn btn--primary"
                     >
                       {l.ctaPrimary}

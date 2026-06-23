@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "./Reveal";
 
 export default function CtaStrip() {
@@ -18,12 +19,9 @@ export default function CtaStrip() {
             </p>
           </div>
           <div className="cta-strip__actions">
-            <a
-              href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like a feasibility note — I have a plot/brief I'd like to discuss.")}`}
-              className="btn btn--primary"
-            >
-              Message us
-            </a>
+            <Link href="/contact" className="btn btn--primary">
+              Get a feasibility note
+            </Link>
             <a href="mailto:bina.designbuild@gmail.com" className="btn btn--ghost">Email us</a>
           </div>
         </Reveal>

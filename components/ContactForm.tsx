@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import type { Locale } from "@/lib/dict";
 
 const WA_NAJIHA = "60193428981";
@@ -25,10 +25,14 @@ const COPY = {
     areaPh: "Shah Alam, Subang Jaya, PJ, etc.",
     message: "Brief description",
     messagePh: "Floor plan link, scope, anything useful.",
-    submit: "Send message",
+    submit: "Send my details",
+    submitting: "Sending…",
     errorReq: "Please fill in your name, phone and what you're looking for.",
-    successPrefix: "Thanks. We're opening a chat with your details now. If nothing happens, ",
-    successLink: "tap here →",
+    success:
+      "Thanks — we've got your details and will reply within one working day. For anything urgent, WhatsApp us directly.",
+    fallbackLead:
+      "We couldn't submit the form just now. Tap below to send the same details to us on WhatsApp instead — nothing is lost.",
+    fallbackLink: "Send via WhatsApp →",
   },
   ms: {
     name: "Nama anda",
@@ -49,27 +53,65 @@ const COPY = {
     areaPh: "Shah Alam, Subang Jaya, PJ, dll.",
     message: "Penerangan ringkas",
     messagePh: "Link pelan lantai, skop, apa-apa yang berguna.",
-    submit: "Hantar mesej",
+    submit: "Hantar butiran saya",
+    submitting: "Menghantar…",
     errorReq: "Sila isi nama, telefon dan apa yang anda cari.",
-    successPrefix: "Terima kasih. Kami sedang buka sembang dengan butiran anda. Kalau tak terbuka, ",
-    successLink: "tekan sini →",
+    success:
+      "Terima kasih — kami dah terima butiran anda dan akan balas dalam satu hari bekerja. Kalau ada hal segera, WhatsApp kami terus.",
+    fallbackLead:
+      "Borang tak dapat dihantar buat masa ini. Tekan di bawah untuk hantar butiran yang sama melalui WhatsApp — tiada apa yang hilang.",
+    fallbackLink: "Hantar melalui WhatsApp →",
   },
 } as const;
 
+// Map a package code (?package=BINA START) to the matching "interest" option.
+function interestForPackage(pkg: string, locale: Locale): string {
+  const opts = COPY[locale].interestOpts;
+  if (/^BINA/i.test(pkg)) return opts[0];
+  if (/^RENO/i.test(pkg)) return opts[1];
+  if (/^ID/i.test(pkg)) return opts[2];
+  return "";
+}
+
 export default function ContactForm({ locale }: { locale: Locale }) {
   const c = COPY[locale];
-  const [state, setState] = useState<"idle" | "ok" | "err">("idle");
+  const [state, setState] = useState<"idle" | "sending" | "ok" | "fallback" | "err">("idle");
   const [waUrl, setWaUrl] = useState("");
   const [errMsg, setErrMsg] = useState("");
 
-  const onSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const fd = new FormData(form);
+  // Context carried from the page that sent the visitor here.
+  const [presetInterest, setPresetInterest] = useState("");
+  const [presetMessage, setPresetMessage] = useState("");
+  const [source, setSource] = useState("Contact page");
+  const [page, setPage] = useState("");
 
-    // Honeypot
-    if (fd.get("website")) return;
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const pkg = params.get("package");
+    const project = params.get("project");
 
+    if (pkg) {
+      setPresetInterest(interestForPackage(pkg, locale));
+      setPresetMessage(
+        locale === "ms"
+          ? `Saya berminat dengan pakej ${pkg}.`
+          : `I'm interested in the ${pkg} package.`
+      );
+      setSource(`Package: ${pkg}`);
+    } else if (project) {
+      setPresetMessage(
+        locale === "ms"
+          ? `Saya nak projek seumpama "${project}".`
+          : `I'd like a similar-scope project to "${project}".`
+      );
+      setSource(`Project: ${project}`);
+    }
+    setPage(document.referrer || window.location.pathname);
+  }, [locale]);
+
+  // Build a WhatsApp deep link from the form values (used as a fallback only).
+  const composeWa = (fd: FormData) => {
     const name = String(fd.get("name") || "").trim();
     const phone = String(fd.get("phone") || "").trim();
     const email = String(fd.get("email") || "").trim();
@@ -77,19 +119,14 @@ export default function ContactForm({ locale }: { locale: Locale }) {
     const area = String(fd.get("area") || "").trim();
     const message = String(fd.get("message") || "").trim();
 
-    if (!name || !phone || !interest) {
-      setState("err");
-      setErrMsg(c.errorReq);
-      return;
-    }
-
-    // Compose WhatsApp message
-    const intro = locale === "ms"
-      ? "Hai BINA+! Saya hubungi melalui borang kenalan."
-      : "Hi BINA+! I'm reaching out via the contact form.";
-    const L = locale === "ms"
-      ? { name: "Nama", phone: "Telefon", email: "E-mel", interest: "Cari", area: "Kawasan", note: "Nota" }
-      : { name: "Name", phone: "Phone", email: "Email", interest: "Looking for", area: "Area", note: "Notes" };
+    const intro =
+      locale === "ms"
+        ? "Hai BINA+! Saya hubungi melalui borang kenalan."
+        : "Hi BINA+! I'm reaching out via the contact form.";
+    const L =
+      locale === "ms"
+        ? { name: "Nama", phone: "Telefon", email: "E-mel", interest: "Cari", area: "Kawasan", note: "Nota" }
+        : { name: "Name", phone: "Phone", email: "Email", interest: "Looking for", area: "Area", note: "Notes" };
 
     const lines = [intro, "", `${L.name}: ${name}`, `${L.phone}: ${phone}`];
     if (email) lines.push(`${L.email}: ${email}`);
@@ -99,15 +136,71 @@ export default function ContactForm({ locale }: { locale: Locale }) {
       lines.push("");
       lines.push(`${L.note}: ${message}`);
     }
-    const text = lines.join("\n");
-
-    // Route all leads to Najiha
-    const url = `https://wa.me/${WA_NAJIHA}?text=${encodeURIComponent(text)}`;
-
-    setState("ok");
-    setWaUrl(url);
-    window.open(url, "_blank", "noopener");
+    return `https://wa.me/${WA_NAJIHA}?text=${encodeURIComponent(lines.join("\n"))}`;
   };
+
+  const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const fd = new FormData(form);
+
+    // Honeypot
+    if (fd.get("website")) return;
+
+    const name = String(fd.get("name") || "").trim();
+    const phone = String(fd.get("phone") || "").trim();
+    const interest = String(fd.get("interest") || "");
+
+    if (!name || !phone || !interest) {
+      setState("err");
+      setErrMsg(c.errorReq);
+      return;
+    }
+
+    setState("sending");
+
+    const payload = {
+      name,
+      phone,
+      email: String(fd.get("email") || "").trim(),
+      interest,
+      area: String(fd.get("area") || "").trim(),
+      message: String(fd.get("message") || "").trim(),
+      source: String(fd.get("source") || "").trim(),
+      page: String(fd.get("page") || "").trim(),
+      website: "",
+    };
+
+    try {
+      const res = await fetch("/api/lead", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (data?.ok) {
+        setState("ok");
+        form.reset();
+        return;
+      }
+      // Anything else → WhatsApp fallback so the lead isn't lost.
+      setWaUrl(composeWa(fd));
+      setState("fallback");
+    } catch {
+      setWaUrl(composeWa(fd));
+      setState("fallback");
+    }
+  };
+
+  if (state === "ok") {
+    return (
+      <div className="contact-form">
+        <div className="contact-form__msg contact-form__msg--ok" role="status" aria-live="polite">
+          {c.success}
+        </div>
+      </div>
+    );
+  }
 
   return (
     <form className="contact-form" onSubmit={onSubmit} noValidate>
@@ -120,6 +213,9 @@ export default function ContactForm({ locale }: { locale: Locale }) {
         aria-hidden="true"
         className="contact-form__hp"
       />
+      {/* Context carried from the referring page */}
+      <input type="hidden" name="source" value={source} />
+      <input type="hidden" name="page" value={page} />
 
       <div className="contact-form__row">
         <div className="contact-form__field">
@@ -166,7 +262,13 @@ export default function ContactForm({ locale }: { locale: Locale }) {
           <label htmlFor="cf-interest">
             {c.interest} <span aria-hidden="true">*</span>
           </label>
-          <select id="cf-interest" name="interest" required defaultValue="">
+          <select
+            id="cf-interest"
+            name="interest"
+            required
+            defaultValue={presetInterest}
+            key={presetInterest}
+          >
             <option value="" disabled>
               {c.interestPh}
             </option>
@@ -194,21 +296,20 @@ export default function ContactForm({ locale }: { locale: Locale }) {
           name="message"
           rows={4}
           placeholder={c.messagePh}
+          defaultValue={presetMessage}
+          key={presetMessage}
         />
       </div>
 
-      <button type="submit" className="btn contact-form__submit">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-          <path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-1 1.1-.2.2-.4.2-.7.1-.3-.1-1.2-.5-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.5-.5c.2-.2.2-.3.4-.5.1-.2.1-.4 0-.5L9.4 7c-.2-.5-.4-.4-.6-.4H8.3c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.5 1 2.9 1.2 3.1.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.4-.1-.2-.3-.3-.6-.4zM12 2C6.5 2 2 6.5 2 12c0 1.8.5 3.5 1.3 4.9L2 22l5.3-1.4c1.4.8 3 1.2 4.7 1.2 5.5 0 10-4.5 10-10S17.5 2 12 2z" />
-        </svg>
-        {c.submit}
+      <button type="submit" className="btn contact-form__submit" disabled={state === "sending"}>
+        {state === "sending" ? c.submitting : c.submit}
       </button>
 
-      {state === "ok" && (
-        <div className="contact-form__msg contact-form__msg--ok" role="status" aria-live="polite">
-          {c.successPrefix}
+      {state === "fallback" && (
+        <div className="contact-form__msg contact-form__msg--err" role="status" aria-live="polite">
+          {c.fallbackLead}{" "}
           <a href={waUrl} target="_blank" rel="noopener noreferrer">
-            {c.successLink}
+            {c.fallbackLink}
           </a>
         </div>
       )}

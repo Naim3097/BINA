@@ -150,7 +150,7 @@ export default function AboutMs() {
                   ketika konkrit dituang. Pendekatannya: satu studio, satu pengurus, tiada kejutan.
                 </p>
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin berhubung mengenai projek yang berpotensi.")}`}
+                  href="/ms/contact"
                   className="team-principal__cta"
                 >
                   Hubungi kami →
@@ -232,7 +232,7 @@ export default function AboutMs() {
                   Dapatkan arah
                 </a>
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin melawat studio — boleh sahkan masa yang sesuai?")}`}
+                  href="/ms/contact"
                   className="btn btn--ghost"
                 >
                   Hantar mesej

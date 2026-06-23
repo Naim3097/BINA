@@ -6,7 +6,6 @@ import {
   BLOG_INTRO,
   blogHref,
   getRelated,
-  waLink,
 } from "@/lib/blog";
 
 function Block({ block, locale }: { block: BlogPost["body"][number]; locale: Locale }) {
@@ -90,14 +89,9 @@ export default function BlogArticle({
               </p>
             </div>
             <div className="blog-cta__actions">
-              <a
-                href={waLink(post.cta.waText[locale])}
-                className="btn btn--primary"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {locale === "ms" ? "Hantar mesej" : "Message us"}
-              </a>
+              <Link href={locale === "ms" ? "/ms/contact" : "/contact"} className="btn btn--primary">
+                {locale === "ms" ? "Hubungi kami" : "Get in touch"}
+              </Link>
               <Link href={`${servicesHref}${post.cta.href.replace(/^\/services/, "")}`} className="btn btn--ghost">
                 {locale === "ms" ? "Lihat pakej" : "See packages"}
               </Link>

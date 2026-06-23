@@ -99,7 +99,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">1,200 kps · 3 bilik · 2 bilik air · Setingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM200k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej BINA START (Reka & Bina · setingkat, 1,200 kps, 3 bilik / 2 bilik air, mula RM200k).")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA START")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -117,7 +117,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">1,500 kps · 3 bilik · 2 bilik air · 1.5 tingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM350k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej BINA PLUS (Reka & Bina · 1.5 tingkat, 1,500 kps, 3 bilik / 2 bilik air, mula RM350k).")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA PLUS")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -134,7 +134,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">2,000 kps · 4 bilik · 3 bilik air · Dua tingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM460k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej BINA MAX (Reka & Bina · dua tingkat, 2,000 kps, 4 bilik / 3 bilik air, mula RM460k).")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA MAX")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -178,7 +178,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">Sambungan setingkat di belakang</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM100k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej RENO START (sambungan setingkat di belakang, mula RM100k).")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO START")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -196,7 +196,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">Sambungan dua tingkat penuh</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM200k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej RENO PLUS (sambungan dua tingkat penuh, mula RM200k).")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO PLUS")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -213,7 +213,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">Sambungan dua tingkat untuk lot bucu</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM300k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej RENO MAX (sambungan lot bucu dua tingkat, mula RM300k).")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO MAX")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -261,7 +261,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">~650 kps · Asas</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM39k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej ID START (Reka Bentuk Dalaman · siri melamine, mula RM39k).")}`}
+                      href={`/contact?package=${encodeURIComponent("ID START")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -279,7 +279,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">~1,000 kps · Sesuai keluarga</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM59k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej ID PLUS (Reka Bentuk Dalaman · siri laminated, mula RM59k).")}`}
+                      href={`/contact?package=${encodeURIComponent("ID PLUS")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -296,7 +296,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">~1,300 kps · Kemasan premium</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM79k</strong></div>
                     <a
-                      href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya berminat dengan pakej ID MAX (Reka Bentuk Dalaman · siri shaker design, mula RM79k).")}`}
+                      href={`/contact?package=${encodeURIComponent("ID MAX")}`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -356,7 +356,7 @@ export default function ServicesMs() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin dapatkan nota kebolehlaksanaan percuma — saya sedang melihat pakej anda dan ingin bincang projek saya.")}`}
+                  href="/contact"
                   className="btn btn--primary"
                 >
                   Hantar mesej

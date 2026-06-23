@@ -80,7 +80,7 @@ export default async function CaseStudiesMs() {
               <div className="cs-hero__cta">
                 <a href="#projects" className="btn btn--primary">Lihat projek</a>
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Saya ingin mulakan projek — sila hantar nota kebolehlaksanaan.")}`}
+                  href="/ms/contact"
                   className="btn btn--ghost btn--ghost-light"
                 >
                   Mulakan projek
@@ -162,7 +162,7 @@ export default async function CaseStudiesMs() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hai BINA+! Salah satu projek anda menarik perhatian saya — boleh hantar nota kebolehlaksanaan skop serupa?")}`}
+                  href="/ms/contact"
                   className="btn btn--primary"
                 >
                   Mulakan projek

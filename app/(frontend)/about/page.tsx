@@ -161,7 +161,7 @@ export default function AboutEn() {
                   approach: one studio, one manager, no surprises.
                 </p>
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like to get in touch about a potential project.")}`}
+                  href="/contact"
                   className="team-principal__cta"
                 >
                   Get in touch →
@@ -243,7 +243,7 @@ export default function AboutEn() {
                   Get directions
                 </a>
                 <a
-                  href={`https://wa.me/60193428981?text=${encodeURIComponent("Hi BINA+! I'd like to drop by the studio — can you confirm a good time?")}`}
+                  href="/contact"
                   className="btn btn--ghost"
                 >
                   Message us
