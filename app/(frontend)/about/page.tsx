@@ -161,7 +161,7 @@ export default function AboutEn() {
                   approach: one studio, one manager, no surprises.
                 </p>
                 <a
-                  href="/contact"
+                  href="/contact#form"
                   className="team-principal__cta"
                 >
                   Get in touch →
@@ -243,7 +243,7 @@ export default function AboutEn() {
                   Get directions
                 </a>
                 <a
-                  href="/contact"
+                  href="/contact#form"
                   className="btn btn--ghost"
                 >
                   Message us

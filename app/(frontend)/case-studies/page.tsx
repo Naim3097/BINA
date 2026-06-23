@@ -77,7 +77,7 @@ export default async function CaseStudiesEn() {
               <div className="cs-hero__cta">
                 <a href="#projects" className="btn btn--primary">Browse projects</a>
                 <a
-                  href="/contact"
+                  href="/contact#form"
                   className="btn btn--ghost btn--ghost-light"
                 >
                   Start a project
@@ -157,7 +157,7 @@ export default async function CaseStudiesEn() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href="/contact"
+                  href="/contact#form"
                   className="btn btn--primary"
                 >
                   Start a project

@@ -99,7 +99,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">1,200 kps · 3 bilik · 2 bilik air · Setingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM200k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("BINA START")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("BINA START")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -117,7 +117,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">1,500 kps · 3 bilik · 2 bilik air · 1.5 tingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM350k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("BINA PLUS")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("BINA PLUS")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -134,7 +134,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">2,000 kps · 4 bilik · 3 bilik air · Dua tingkat</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM460k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("BINA MAX")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("BINA MAX")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -178,7 +178,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">Sambungan setingkat di belakang</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM100k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("RENO START")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("RENO START")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -196,7 +196,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">Sambungan dua tingkat penuh</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM200k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("RENO PLUS")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("RENO PLUS")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -213,7 +213,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">Sambungan dua tingkat untuk lot bucu</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM300k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("RENO MAX")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("RENO MAX")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -261,7 +261,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">~650 kps · Asas</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM39k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("ID START")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("ID START")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -279,7 +279,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">~1,000 kps · Sesuai keluarga</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM59k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("ID PLUS")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("ID PLUS")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -296,7 +296,7 @@ export default function ServicesMs() {
                     <div className="tier__spec">~1,300 kps · Kemasan premium</div>
                     <div className="tier__price"><small>BERMULA</small><strong>RM79k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("ID MAX")}`}
+                      href={`/ms/contact?package=${encodeURIComponent("ID MAX")}#form`}
                       className="tier__cta"
                     >
                       Tanya →
@@ -356,7 +356,7 @@ export default function ServicesMs() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href="/contact"
+                  href="/ms/contact#form"
                   className="btn btn--primary"
                 >
                   Hantar mesej

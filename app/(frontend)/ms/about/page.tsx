@@ -150,7 +150,7 @@ export default function AboutMs() {
                   ketika konkrit dituang. Pendekatannya: satu studio, satu pengurus, tiada kejutan.
                 </p>
                 <a
-                  href="/ms/contact"
+                  href="/ms/contact#form"
                   className="team-principal__cta"
                 >
                   Hubungi kami →
@@ -232,7 +232,7 @@ export default function AboutMs() {
                   Dapatkan arah
                 </a>
                 <a
-                  href="/ms/contact"
+                  href="/ms/contact#form"
                   className="btn btn--ghost"
                 >
                   Hantar mesej

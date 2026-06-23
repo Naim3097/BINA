@@ -89,7 +89,7 @@ export default function BlogArticle({
               </p>
             </div>
             <div className="blog-cta__actions">
-              <Link href={locale === "ms" ? "/ms/contact" : "/contact"} className="btn btn--primary">
+              <Link href={locale === "ms" ? "/ms/contact#form" : "/contact#form"} className="btn btn--primary">
                 {locale === "ms" ? "Hubungi kami" : "Get in touch"}
               </Link>
               <Link href={`${servicesHref}${post.cta.href.replace(/^\/services/, "")}`} className="btn btn--ghost">

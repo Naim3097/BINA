@@ -73,7 +73,7 @@ export default function Header({ locale, altHref, selfHref, current }: Props) {
           </nav>
           <div className="nav__right">
             <LangSwitcher locale={locale} altHref={altHref} selfHref={selfHref} variant="short" />
-            <Link href={r.contact} className="btn btn--primary nav__quote">
+            <Link href={`${r.contact}#form`} className="btn btn--primary nav__quote">
               {d.nav.getQuote}
             </Link>
             <button

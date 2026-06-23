@@ -206,7 +206,7 @@ export default function ProjectModal({ project, onClose, locale = "en" }: Props)
                   </div>
                   <div className="pm-cta__actions">
                     <a
-                      href={`${locale === "ms" ? "/ms/contact" : "/contact"}?project=${encodeURIComponent(project.title)}`}
+                      href={`${locale === "ms" ? "/ms/contact" : "/contact"}?project=${encodeURIComponent(project.title)}#form`}
                       className="btn btn--primary"
                     >
                       {l.ctaPrimary}

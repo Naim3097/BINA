@@ -12,7 +12,7 @@ export default function WhatsAppFab() {
   const pathname = usePathname() || "/";
   const isMs = pathname === "/ms" || pathname.startsWith("/ms/");
   const c = isMs ? COPY.ms : COPY.en;
-  const href = isMs ? "/ms/contact" : "/contact";
+  const href = isMs ? "/ms/contact#form" : "/contact#form";
 
   return (
     <Link href={href} className="wa-fab" aria-label={c.aria}>

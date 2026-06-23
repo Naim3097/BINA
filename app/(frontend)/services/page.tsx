@@ -124,7 +124,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">1,200 sqft · 3 bed · 2 bath · Single-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("BINA START")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA START")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -145,7 +145,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">1,500 sqft · 3 bed · 2 bath · 1.5-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM350k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("BINA PLUS")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA PLUS")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -165,7 +165,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">2,000 sqft · 4 bed · 3 bath · Double-storey</div>
                     <div className="tier__price"><small>FROM</small><strong>RM460k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("BINA MAX")}`}
+                      href={`/contact?package=${encodeURIComponent("BINA MAX")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -214,7 +214,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">Single-storey rear extension</div>
                     <div className="tier__price"><small>FROM</small><strong>RM100k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("RENO START")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO START")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -235,7 +235,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">Full two-storey extension</div>
                     <div className="tier__price"><small>FROM</small><strong>RM200k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("RENO PLUS")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO PLUS")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -255,7 +255,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">2-storey corner-lot expansion</div>
                     <div className="tier__price"><small>FROM</small><strong>RM300k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("RENO MAX")}`}
+                      href={`/contact?package=${encodeURIComponent("RENO MAX")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -308,7 +308,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">~650 sqft · Essentials</div>
                     <div className="tier__price"><small>FROM</small><strong>RM39k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("ID START")}`}
+                      href={`/contact?package=${encodeURIComponent("ID START")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -329,7 +329,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">~1,000 sqft · Family-ready</div>
                     <div className="tier__price"><small>FROM</small><strong>RM59k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("ID PLUS")}`}
+                      href={`/contact?package=${encodeURIComponent("ID PLUS")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -349,7 +349,7 @@ export default function ServicesEn() {
                     <div className="tier__spec">~1,300 sqft · Premium finish</div>
                     <div className="tier__price"><small>FROM</small><strong>RM79k</strong></div>
                     <a
-                      href={`/contact?package=${encodeURIComponent("ID MAX")}`}
+                      href={`/contact?package=${encodeURIComponent("ID MAX")}#form`}
                       className="tier__cta"
                     >
                       Enquire →
@@ -423,7 +423,7 @@ export default function ServicesEn() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href="/contact"
+                  href="/contact#form"
                   className="btn btn--primary"
                 >
                   Message us

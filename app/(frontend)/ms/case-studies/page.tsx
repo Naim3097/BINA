@@ -80,7 +80,7 @@ export default async function CaseStudiesMs() {
               <div className="cs-hero__cta">
                 <a href="#projects" className="btn btn--primary">Lihat projek</a>
                 <a
-                  href="/ms/contact"
+                  href="/ms/contact#form"
                   className="btn btn--ghost btn--ghost-light"
                 >
                   Mulakan projek
@@ -162,7 +162,7 @@ export default async function CaseStudiesMs() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href="/ms/contact"
+                  href="/ms/contact#form"
                   className="btn btn--primary"
                 >
                   Mulakan projek

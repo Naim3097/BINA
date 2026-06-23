@@ -282,7 +282,7 @@ export default function HomeMs() {
               </div>
               <div className="cta-strip__actions">
                 <a
-                  href="/ms/contact"
+                  href="/ms/contact#form"
                   className="btn btn--primary"
                 >
                   Hantar mesej

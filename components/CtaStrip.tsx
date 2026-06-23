@@ -19,7 +19,7 @@ export default function CtaStrip() {
             </p>
           </div>
           <div className="cta-strip__actions">
-            <Link href="/contact" className="btn btn--primary">
+            <Link href="/contact#form" className="btn btn--primary">
               Get a feasibility note
             </Link>
             <a href="mailto:bina.designbuild@gmail.com" className="btn btn--ghost">Email us</a>
