@@ -3,6 +3,12 @@
 import { useEffect, useState, type FormEvent } from "react";
 import type { Locale } from "@/lib/dict";
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
 const WA_NAJIHA = "60193428981";
 
 const COPY = {
@@ -179,6 +185,8 @@ export default function ContactForm({ locale }: { locale: Locale }) {
       });
       const data = await res.json();
       if (data?.ok) {
+        // Meta Pixel conversion — fires on a real, validated form submission.
+        window.fbq?.("track", "Lead", { content_name: interest, source });
         setState("ok");
         form.reset();
         return;
