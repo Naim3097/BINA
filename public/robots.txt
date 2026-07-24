@@ -5,4 +5,4 @@ Disallow: /lp-renovation.html
 Disallow: /lp-*
 Disallow: /privacy.html
 
-Sitemap: https://bina.designbuild/sitemap.xml
+Sitemap: https://binaplusdesign.my/sitemap.xml
